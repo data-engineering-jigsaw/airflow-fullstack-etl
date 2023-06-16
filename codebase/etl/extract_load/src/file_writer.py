@@ -12,22 +12,17 @@ def search_and_write(origin, destination, departure_date = None):
                                         departure_date = departure)
     write_to_file(flight_data, filename)
 
-def search_and_upload(origin, destination, departure_date = None):
-    bucket_name = 'amadeusflightjigsaw'
+def search_and_upload(origin, destination, dest_file, departure_date = None):
     client = AmadeusClient()
-    departure = client.generate_departure_date(departure_date, days = 14)
-    file_name = generate_file_name(origin, destination, 
-                                        departure_date = departure)
-    extracted_file_name = file_name.split('/')[-1]
-    dest_file = f'raw/{extracted_file_name}'
-    
-    
-    
+    if not departure_date:
+        departure_date = client.generate_departure_date(departure_date, days = 14)
     flight_data = client.search_flights(origin, destination, 
-                                        departureDate = departure)
-    
+                                        departureDate = departure_date)
+    bucket_name = 'amadeusflightjigsaw'
     write_to_s3(flight_data, bucket_name, dest_file)
-    return {'file': dest_file, 'flight_data': flight_data}
+    response = {'file': dest_file, 'flight_data': flight_data['data'][:20]}
+    print(response)
+    return response
 
 def write_to_s3(bucket_data, bucket_name, file_name):
     s3 = boto3.client('s3')

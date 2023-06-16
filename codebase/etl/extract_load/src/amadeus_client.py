@@ -20,6 +20,12 @@ class AmadeusClient:
         access_token = access_token_response.json()['access_token']
         return access_token
     
+    def generate_departure_date(self, departureDate = None, days = 14):
+        if not departureDate:
+          delta = timedelta(days=days)
+          departureDate = datetime.today() + delta
+        return departureDate
+    
     def search_flights(self, origin, destination, departureDate = None):
         access_token = self.get_access_token()
         headers = CaseInsensitiveDict()
@@ -35,8 +41,4 @@ class AmadeusClient:
         response = requests.get(url, params = params, headers=headers)
         return response.json()
 
-    def generate_departure_date(self, departureDate = None, days = 14):
-        if not departureDate:
-          delta = timedelta(days=days)
-          departureDate = datetime.today() + delta
-        return departureDate
+    
