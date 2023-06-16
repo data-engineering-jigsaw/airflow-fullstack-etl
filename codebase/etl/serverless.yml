@@ -1,0 +1,33 @@
+service: flights-app
+frameworkVersion: '3'
+provider:
+  name: aws
+  runtime: python3.9
+  architecture: arm64
+  memorySize: 10240 
+  timeout: 45
+  ecr:
+    images:
+      extract_load:
+        path: ./extract_load
+      transform_load:
+        path: ./transform_load
+  iam:
+    role:
+      statements:
+        - Effect: "Allow"
+          Action:
+            - s3:*
+          Resource: "*"
+functions:
+  extract_load:
+    image:
+      name: extract_load
+  transform_load:
+    image:
+      name: transform_load
+    events:
+      - s3:
+          bucket: amadeusflightjigsaw
+          event: s3:ObjectCreated:*
+          existing: true

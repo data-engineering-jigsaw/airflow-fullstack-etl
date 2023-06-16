@@ -1,0 +1,48 @@
+[2023-06-16 15:25:14,676] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: hello_world.hello_task 2023-06-15T00:00:00+00:00 [queued]>
+[2023-06-16 15:25:14,755] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: hello_world.hello_task 2023-06-15T00:00:00+00:00 [queued]>
+[2023-06-16 15:25:14,756] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-16 15:25:14,757] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2023-06-16 15:25:14,758] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-16 15:25:14,782] {taskinstance.py:1063} INFO - Executing <Task(_PythonDecoratedOperator): hello_task> on 2023-06-15T00:00:00+00:00
+[2023-06-16 15:25:14,803] {standard_task_runner.py:52} INFO - Started process 80 to run task
+[2023-06-16 15:25:14,814] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'hello_world', 'hello_task', '2023-06-15T00:00:00+00:00', '--job-id', '107', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/hello_dag.py', '--cfg-path', '/tmp/tmp28a0slrf', '--error-file', '/tmp/tmpwwx3360v']
+[2023-06-16 15:25:14,816] {standard_task_runner.py:77} INFO - Job 107: Subtask hello_task
+[2023-06-16 15:25:14,905] {logging_mixin.py:104} INFO - Running <TaskInstance: hello_world.hello_task 2023-06-15T00:00:00+00:00 [running]> on host 7a62ecf52086
+[2023-06-16 15:25:14,983] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=hello_world
+AIRFLOW_CTX_TASK_ID=hello_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-15T00:00:00+00:00
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-06-15T00:00:00+00:00
+[2023-06-16 15:25:15,386] {xcom.py:238} ERROR - Could not serialize the XCom value into JSON. If you are using pickles instead of JSON for XCom, then you need to enable pickle support for XCom in your airflow config.
+[2023-06-16 15:25:15,391] {taskinstance.py:1455} ERROR - Object of type 'StreamingBody' is not JSON serializable
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1318, in _execute_task
+    self.xcom_push(key=XCOM_RETURN_KEY, value=result)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 65, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1899, in xcom_push
+    session=session,
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/utils/session.py", line 62, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/xcom.py", line 88, in set
+    value = XCom.serialize_value(value)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/xcom.py", line 235, in serialize_value
+    return json.dumps(value).encode('UTF-8')
+  File "/usr/local/lib/python3.6/json/__init__.py", line 231, in dumps
+    return _default_encoder.encode(obj)
+  File "/usr/local/lib/python3.6/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.6/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/local/lib/python3.6/json/encoder.py", line 180, in default
+    o.__class__.__name__)
+TypeError: Object of type 'StreamingBody' is not JSON serializable
+[2023-06-16 15:25:15,408] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=hello_world, task_id=hello_task, execution_date=20230615T000000, start_date=20230616T152514, end_date=20230616T152515
+[2023-06-16 15:25:15,483] {local_task_job.py:146} INFO - Task exited with return code 1

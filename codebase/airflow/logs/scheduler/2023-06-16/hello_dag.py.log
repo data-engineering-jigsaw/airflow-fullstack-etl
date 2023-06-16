@@ -1,0 +1,1106 @@
+[2023-06-16 15:18:16,446] {scheduler_job.py:182} INFO - Started process (PID=46) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:18:16,457] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:18:16,465] {logging_mixin.py:104} INFO - [2023-06-16 15:18:16,464] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:18:19,266] {logging_mixin.py:104} INFO - [2023-06-16 15:18:19,264] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:18:19,452] {logging_mixin.py:104} INFO - [2023-06-16 15:18:19,439] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 2, in <module>
+    lambda_client = boto3.client('lambda')
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/__init__.py", line 91, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/session.py", line 838, in create_client
+    client_config=config, api_version=api_version)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 73, in get_client_args
+    endpoint_url, is_secure, scoped_config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 153, in compute_client_args
+    s3_config=s3_config,
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 218, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 301, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 402, in resolve
+    service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 134, in construct_endpoint
+    partition, service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 148, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
+[2023-06-16 15:18:19,457] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:18:19,512] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 3.098 seconds
+[2023-06-16 15:18:49,832] {scheduler_job.py:182} INFO - Started process (PID=48) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:18:49,838] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:18:49,842] {logging_mixin.py:104} INFO - [2023-06-16 15:18:49,841] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:18:50,335] {logging_mixin.py:104} INFO - [2023-06-16 15:18:50,335] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:18:50,500] {logging_mixin.py:104} INFO - [2023-06-16 15:18:50,490] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 2, in <module>
+    lambda_client = boto3.client('lambda')
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/__init__.py", line 91, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/session.py", line 838, in create_client
+    client_config=config, api_version=api_version)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 73, in get_client_args
+    endpoint_url, is_secure, scoped_config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 153, in compute_client_args
+    s3_config=s3_config,
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 218, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 301, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 402, in resolve
+    service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 134, in construct_endpoint
+    partition, service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 148, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
+[2023-06-16 15:18:50,504] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:18:50,549] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.732 seconds
+[2023-06-16 15:19:20,888] {scheduler_job.py:182} INFO - Started process (PID=50) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:19:20,902] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:19:20,907] {logging_mixin.py:104} INFO - [2023-06-16 15:19:20,906] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:19:21,562] {logging_mixin.py:104} INFO - [2023-06-16 15:19:21,561] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:19:21,827] {logging_mixin.py:104} INFO - [2023-06-16 15:19:21,810] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 2, in <module>
+    lambda_client = boto3.client('lambda')
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/__init__.py", line 91, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/session.py", line 838, in create_client
+    client_config=config, api_version=api_version)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 73, in get_client_args
+    endpoint_url, is_secure, scoped_config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 153, in compute_client_args
+    s3_config=s3_config,
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 218, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 301, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 402, in resolve
+    service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 134, in construct_endpoint
+    partition, service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 148, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
+[2023-06-16 15:19:21,837] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:19:21,924] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 1.070 seconds
+[2023-06-16 15:19:52,457] {scheduler_job.py:182} INFO - Started process (PID=52) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:19:52,462] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:19:52,467] {logging_mixin.py:104} INFO - [2023-06-16 15:19:52,467] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:19:53,061] {logging_mixin.py:104} INFO - [2023-06-16 15:19:53,060] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:19:53,311] {logging_mixin.py:104} INFO - [2023-06-16 15:19:53,293] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 2, in <module>
+    lambda_client = boto3.client('lambda')
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/__init__.py", line 91, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/session.py", line 838, in create_client
+    client_config=config, api_version=api_version)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 73, in get_client_args
+    endpoint_url, is_secure, scoped_config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 153, in compute_client_args
+    s3_config=s3_config,
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 218, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 301, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 402, in resolve
+    service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 134, in construct_endpoint
+    partition, service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 148, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
+[2023-06-16 15:19:53,315] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:19:53,362] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.920 seconds
+[2023-06-16 15:20:24,028] {scheduler_job.py:182} INFO - Started process (PID=54) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:20:24,040] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:20:24,046] {logging_mixin.py:104} INFO - [2023-06-16 15:20:24,045] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:20:24,448] {logging_mixin.py:104} INFO - [2023-06-16 15:20:24,448] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:20:24,619] {logging_mixin.py:104} INFO - [2023-06-16 15:20:24,610] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 2, in <module>
+    lambda_client = boto3.client('lambda')
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/__init__.py", line 91, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/session.py", line 838, in create_client
+    client_config=config, api_version=api_version)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 73, in get_client_args
+    endpoint_url, is_secure, scoped_config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 153, in compute_client_args
+    s3_config=s3_config,
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 218, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 301, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 402, in resolve
+    service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 134, in construct_endpoint
+    partition, service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 148, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
+[2023-06-16 15:20:24,621] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:20:24,653] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.644 seconds
+[2023-06-16 15:20:54,792] {scheduler_job.py:182} INFO - Started process (PID=56) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:20:54,803] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:20:54,806] {logging_mixin.py:104} INFO - [2023-06-16 15:20:54,805] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:20:55,374] {logging_mixin.py:104} INFO - [2023-06-16 15:20:55,373] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:20:55,530] {logging_mixin.py:104} INFO - [2023-06-16 15:20:55,518] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 2, in <module>
+    lambda_client = boto3.client('lambda')
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/__init__.py", line 91, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/session.py", line 838, in create_client
+    client_config=config, api_version=api_version)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 73, in get_client_args
+    endpoint_url, is_secure, scoped_config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 153, in compute_client_args
+    s3_config=s3_config,
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 218, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 301, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 402, in resolve
+    service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 134, in construct_endpoint
+    partition, service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 148, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
+[2023-06-16 15:20:55,533] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:20:55,570] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.799 seconds
+[2023-06-16 15:21:26,117] {scheduler_job.py:182} INFO - Started process (PID=58) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:21:26,121] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:21:26,125] {logging_mixin.py:104} INFO - [2023-06-16 15:21:26,124] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:21:26,715] {logging_mixin.py:104} INFO - [2023-06-16 15:21:26,714] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:21:26,894] {logging_mixin.py:104} INFO - [2023-06-16 15:21:26,883] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 2, in <module>
+    lambda_client = boto3.client('lambda')
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/__init__.py", line 91, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/session.py", line 838, in create_client
+    client_config=config, api_version=api_version)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 73, in get_client_args
+    endpoint_url, is_secure, scoped_config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 153, in compute_client_args
+    s3_config=s3_config,
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 218, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 301, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 402, in resolve
+    service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 134, in construct_endpoint
+    partition, service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 148, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
+[2023-06-16 15:21:26,898] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:21:26,951] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.845 seconds
+[2023-06-16 15:21:57,424] {scheduler_job.py:182} INFO - Started process (PID=60) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:21:57,430] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:21:57,434] {logging_mixin.py:104} INFO - [2023-06-16 15:21:57,433] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:21:57,852] {logging_mixin.py:104} INFO - [2023-06-16 15:21:57,852] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:21:57,988] {logging_mixin.py:104} INFO - [2023-06-16 15:21:57,979] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 2, in <module>
+    lambda_client = boto3.client('lambda')
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/__init__.py", line 91, in client
+    return _get_default_session().client(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/boto3/session.py", line 263, in client
+    aws_session_token=aws_session_token, config=config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/session.py", line 838, in create_client
+    client_config=config, api_version=api_version)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 87, in create_client
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 328, in _get_client_args
+    verify, credentials, scoped_config, client_config, endpoint_bridge)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 73, in get_client_args
+    endpoint_url, is_secure, scoped_config)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 153, in compute_client_args
+    s3_config=s3_config,
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 218, in _compute_endpoint_config
+    return self._resolve_endpoint(**resolve_endpoint_kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/args.py", line 301, in _resolve_endpoint
+    service_name, region_name, endpoint_url, is_secure)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 402, in resolve
+    service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 134, in construct_endpoint
+    partition, service_name, region_name)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/regions.py", line 148, in _endpoint_for_partition
+    raise NoRegionError()
+botocore.exceptions.NoRegionError: You must specify a region.
+[2023-06-16 15:21:57,992] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:21:58,035] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.631 seconds
+[2023-06-16 15:22:28,259] {scheduler_job.py:182} INFO - Started process (PID=62) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:22:28,264] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:22:28,266] {logging_mixin.py:104} INFO - [2023-06-16 15:22:28,266] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:22:28,677] {logging_mixin.py:104} INFO - [2023-06-16 15:22:28,677] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:22:28,956] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:22:29,033] {logging_mixin.py:104} INFO - [2023-06-16 15:22:29,033] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:22:29,072] {logging_mixin.py:104} INFO - [2023-06-16 15:22:29,071] {dag.py:1837} INFO - Creating ORM DAG for hello_world
+[2023-06-16 15:22:29,091] {logging_mixin.py:104} INFO - [2023-06-16 15:22:29,090] {dag.py:2273} INFO - Setting next_dagrun for hello_world to 2023-06-15 00:00:00+00:00
+[2023-06-16 15:22:29,123] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.875 seconds
+[2023-06-16 15:23:05,088] {scheduler_job.py:182} INFO - Started process (PID=46) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:23:05,099] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:23:05,112] {logging_mixin.py:104} INFO - [2023-06-16 15:23:05,111] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:23:05,904] {logging_mixin.py:104} INFO - [2023-06-16 15:23:05,903] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:23:06,464] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:23:06,579] {logging_mixin.py:104} INFO - [2023-06-16 15:23:06,578] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:23:06,697] {logging_mixin.py:104} INFO - [2023-06-16 15:23:06,696] {dag.py:2273} INFO - Setting next_dagrun for hello_world to 2023-06-15 00:00:00+00:00
+[2023-06-16 15:23:06,736] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 1.683 seconds
+[2023-06-16 15:23:37,053] {scheduler_job.py:182} INFO - Started process (PID=48) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:23:37,062] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:23:37,068] {logging_mixin.py:104} INFO - [2023-06-16 15:23:37,067] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:23:37,653] {logging_mixin.py:104} INFO - [2023-06-16 15:23:37,652] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:23:37,999] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:23:38,097] {logging_mixin.py:104} INFO - [2023-06-16 15:23:38,097] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:23:38,166] {logging_mixin.py:104} INFO - [2023-06-16 15:23:38,165] {dag.py:2273} INFO - Setting next_dagrun for hello_world to 2023-06-15 00:00:00+00:00
+[2023-06-16 15:23:38,192] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 1.155 seconds
+[2023-06-16 15:24:08,823] {scheduler_job.py:182} INFO - Started process (PID=50) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:24:08,840] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:24:08,865] {logging_mixin.py:104} INFO - [2023-06-16 15:24:08,861] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:24:10,150] {logging_mixin.py:104} INFO - [2023-06-16 15:24:10,149] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:24:10,706] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:24:10,862] {logging_mixin.py:104} INFO - [2023-06-16 15:24:10,861] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:24:11,079] {logging_mixin.py:104} INFO - [2023-06-16 15:24:11,078] {dag.py:2273} INFO - Setting next_dagrun for hello_world to 2023-06-15 00:00:00+00:00
+[2023-06-16 15:24:11,133] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 2.351 seconds
+[2023-06-16 15:24:41,416] {scheduler_job.py:182} INFO - Started process (PID=52) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:24:41,423] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:24:41,427] {logging_mixin.py:104} INFO - [2023-06-16 15:24:41,426] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:24:41,831] {logging_mixin.py:104} INFO - [2023-06-16 15:24:41,831] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:24:42,023] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:24:42,078] {logging_mixin.py:104} INFO - [2023-06-16 15:24:42,078] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:24:42,131] {logging_mixin.py:104} INFO - [2023-06-16 15:24:42,131] {dag.py:2273} INFO - Setting next_dagrun for hello_world to 2023-06-15 00:00:00+00:00
+[2023-06-16 15:24:42,151] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.756 seconds
+[2023-06-16 15:25:12,714] {scheduler_job.py:182} INFO - Started process (PID=54) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:25:12,719] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:25:12,721] {logging_mixin.py:104} INFO - [2023-06-16 15:25:12,721] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:25:13,236] {logging_mixin.py:104} INFO - [2023-06-16 15:25:13,235] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:25:13,467] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:25:13,531] {logging_mixin.py:104} INFO - [2023-06-16 15:25:13,530] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:25:13,582] {logging_mixin.py:104} INFO - [2023-06-16 15:25:13,582] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:25:13,603] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.898 seconds
+[2023-06-16 15:25:44,195] {scheduler_job.py:182} INFO - Started process (PID=56) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:25:44,200] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:25:44,203] {logging_mixin.py:104} INFO - [2023-06-16 15:25:44,202] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:25:44,689] {logging_mixin.py:104} INFO - [2023-06-16 15:25:44,689] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:25:44,884] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:25:44,941] {logging_mixin.py:104} INFO - [2023-06-16 15:25:44,940] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:25:44,988] {logging_mixin.py:104} INFO - [2023-06-16 15:25:44,987] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:25:45,003] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.822 seconds
+[2023-06-16 15:26:15,460] {scheduler_job.py:182} INFO - Started process (PID=58) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:26:15,467] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:26:15,472] {logging_mixin.py:104} INFO - [2023-06-16 15:26:15,470] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:26:15,893] {logging_mixin.py:104} INFO - [2023-06-16 15:26:15,892] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:26:16,089] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:26:16,151] {logging_mixin.py:104} INFO - [2023-06-16 15:26:16,150] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:26:16,218] {logging_mixin.py:104} INFO - [2023-06-16 15:26:16,217] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:26:16,235] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.808 seconds
+[2023-06-16 15:26:46,643] {scheduler_job.py:182} INFO - Started process (PID=60) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:26:46,648] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:26:46,651] {logging_mixin.py:104} INFO - [2023-06-16 15:26:46,650] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:26:47,067] {logging_mixin.py:104} INFO - [2023-06-16 15:26:47,067] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:26:47,271] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:26:47,326] {logging_mixin.py:104} INFO - [2023-06-16 15:26:47,326] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:26:47,379] {logging_mixin.py:104} INFO - [2023-06-16 15:26:47,379] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:26:47,396] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.763 seconds
+[2023-06-16 15:27:17,554] {scheduler_job.py:182} INFO - Started process (PID=62) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:27:17,558] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:27:17,560] {logging_mixin.py:104} INFO - [2023-06-16 15:27:17,560] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:27:17,983] {logging_mixin.py:104} INFO - [2023-06-16 15:27:17,983] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:27:18,173] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:27:18,224] {logging_mixin.py:104} INFO - [2023-06-16 15:27:18,224] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:27:18,273] {logging_mixin.py:104} INFO - [2023-06-16 15:27:18,272] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:27:18,289] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.747 seconds
+[2023-06-16 15:27:48,654] {scheduler_job.py:182} INFO - Started process (PID=64) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:27:48,658] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:27:48,660] {logging_mixin.py:104} INFO - [2023-06-16 15:27:48,660] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:27:49,046] {logging_mixin.py:104} INFO - [2023-06-16 15:27:49,045] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:27:49,242] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:27:49,295] {logging_mixin.py:104} INFO - [2023-06-16 15:27:49,295] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:27:49,339] {logging_mixin.py:104} INFO - [2023-06-16 15:27:49,339] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:27:49,355] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.710 seconds
+[2023-06-16 15:28:19,766] {scheduler_job.py:182} INFO - Started process (PID=66) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:28:19,771] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:28:19,774] {logging_mixin.py:104} INFO - [2023-06-16 15:28:19,774] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:28:20,170] {logging_mixin.py:104} INFO - [2023-06-16 15:28:20,170] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:28:20,382] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:28:20,445] {logging_mixin.py:104} INFO - [2023-06-16 15:28:20,444] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:28:20,494] {logging_mixin.py:104} INFO - [2023-06-16 15:28:20,493] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:28:20,511] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.760 seconds
+[2023-06-16 15:28:50,905] {scheduler_job.py:182} INFO - Started process (PID=68) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:28:50,915] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:28:50,918] {logging_mixin.py:104} INFO - [2023-06-16 15:28:50,917] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:28:51,355] {logging_mixin.py:104} INFO - [2023-06-16 15:28:51,354] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:28:51,525] {logging_mixin.py:104} INFO - [2023-06-16 15:28:51,518] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 29, in <module>
+    @task
+NameError: name 'task' is not defined
+[2023-06-16 15:28:51,528] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:28:51,561] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.673 seconds
+[2023-06-16 15:29:21,678] {scheduler_job.py:182} INFO - Started process (PID=70) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:29:21,683] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:29:21,685] {logging_mixin.py:104} INFO - [2023-06-16 15:29:21,685] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:29:22,100] {logging_mixin.py:104} INFO - [2023-06-16 15:29:22,099] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:29:22,259] {logging_mixin.py:104} INFO - [2023-06-16 15:29:22,254] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 29, in <module>
+    @task
+NameError: name 'task' is not defined
+[2023-06-16 15:29:22,262] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:29:22,304] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.635 seconds
+[2023-06-16 15:29:52,774] {scheduler_job.py:182} INFO - Started process (PID=72) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:29:52,778] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:29:52,782] {logging_mixin.py:104} INFO - [2023-06-16 15:29:52,781] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:29:53,165] {logging_mixin.py:104} INFO - [2023-06-16 15:29:53,165] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:29:53,337] {logging_mixin.py:104} INFO - [2023-06-16 15:29:53,331] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 29, in <module>
+    @task
+NameError: name 'task' is not defined
+[2023-06-16 15:29:53,340] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:29:53,375] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.613 seconds
+[2023-06-16 15:30:23,781] {scheduler_job.py:182} INFO - Started process (PID=74) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:30:23,784] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:30:23,787] {logging_mixin.py:104} INFO - [2023-06-16 15:30:23,787] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:30:24,187] {logging_mixin.py:104} INFO - [2023-06-16 15:30:24,187] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:30:24,361] {logging_mixin.py:104} INFO - [2023-06-16 15:30:24,356] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 29, in <module>
+    @task
+NameError: name 'task' is not defined
+[2023-06-16 15:30:24,364] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:30:24,400] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.628 seconds
+[2023-06-16 15:30:54,801] {scheduler_job.py:182} INFO - Started process (PID=76) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:30:54,805] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:30:54,807] {logging_mixin.py:104} INFO - [2023-06-16 15:30:54,807] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:30:55,219] {logging_mixin.py:104} INFO - [2023-06-16 15:30:55,218] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:30:55,374] {logging_mixin.py:104} INFO - [2023-06-16 15:30:55,370] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 29, in <module>
+    @task
+NameError: name 'task' is not defined
+[2023-06-16 15:30:55,376] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:30:55,410] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.617 seconds
+[2023-06-16 15:31:25,927] {scheduler_job.py:182} INFO - Started process (PID=78) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:31:25,933] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:31:25,936] {logging_mixin.py:104} INFO - [2023-06-16 15:31:25,935] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:31:26,316] {logging_mixin.py:104} INFO - [2023-06-16 15:31:26,316] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:31:26,480] {logging_mixin.py:104} INFO - [2023-06-16 15:31:26,473] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 29, in <module>
+    @task
+NameError: name 'task' is not defined
+[2023-06-16 15:31:26,484] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:31:26,530] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.618 seconds
+[2023-06-16 15:31:56,882] {scheduler_job.py:182} INFO - Started process (PID=80) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:31:56,886] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:31:56,889] {logging_mixin.py:104} INFO - [2023-06-16 15:31:56,888] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:31:57,306] {logging_mixin.py:104} INFO - [2023-06-16 15:31:57,305] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:31:57,504] {logging_mixin.py:104} INFO - [2023-06-16 15:31:57,499] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 29, in <module>
+    @task
+NameError: name 'task' is not defined
+[2023-06-16 15:31:57,506] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:31:57,552] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.678 seconds
+[2023-06-16 15:32:27,913] {scheduler_job.py:182} INFO - Started process (PID=82) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:32:27,918] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:32:27,920] {logging_mixin.py:104} INFO - [2023-06-16 15:32:27,920] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:32:28,290] {logging_mixin.py:104} INFO - [2023-06-16 15:32:28,289] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:32:28,508] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:32:28,568] {logging_mixin.py:104} INFO - [2023-06-16 15:32:28,567] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:32:28,613] {logging_mixin.py:104} INFO - [2023-06-16 15:32:28,613] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:32:28,634] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.729 seconds
+[2023-06-16 15:33:02,504] {scheduler_job.py:182} INFO - Started process (PID=45) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:33:02,511] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:33:02,515] {logging_mixin.py:104} INFO - [2023-06-16 15:33:02,514] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:33:03,280] {logging_mixin.py:104} INFO - [2023-06-16 15:33:03,279] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:33:03,545] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:33:03,719] {logging_mixin.py:104} INFO - [2023-06-16 15:33:03,718] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:33:03,849] {logging_mixin.py:104} INFO - [2023-06-16 15:33:03,848] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:33:03,898] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 1.417 seconds
+[2023-06-16 15:33:34,134] {scheduler_job.py:182} INFO - Started process (PID=47) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:33:34,141] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:33:34,146] {logging_mixin.py:104} INFO - [2023-06-16 15:33:34,145] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:33:34,623] {logging_mixin.py:104} INFO - [2023-06-16 15:33:34,622] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:33:34,878] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:33:34,941] {logging_mixin.py:104} INFO - [2023-06-16 15:33:34,940] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:33:34,997] {logging_mixin.py:104} INFO - [2023-06-16 15:33:34,997] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:33:35,018] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.914 seconds
+[2023-06-16 15:34:05,616] {scheduler_job.py:182} INFO - Started process (PID=49) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:34:05,627] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:34:05,634] {logging_mixin.py:104} INFO - [2023-06-16 15:34:05,633] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:34:06,388] {logging_mixin.py:104} INFO - [2023-06-16 15:34:06,387] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:34:06,638] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:34:06,711] {logging_mixin.py:104} INFO - [2023-06-16 15:34:06,710] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:34:06,785] {logging_mixin.py:104} INFO - [2023-06-16 15:34:06,784] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:34:06,812] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 1.242 seconds
+[2023-06-16 15:34:37,012] {scheduler_job.py:182} INFO - Started process (PID=51) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:34:37,017] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:34:37,020] {logging_mixin.py:104} INFO - [2023-06-16 15:34:37,020] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:34:37,446] {logging_mixin.py:104} INFO - [2023-06-16 15:34:37,445] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:34:37,690] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:34:37,747] {logging_mixin.py:104} INFO - [2023-06-16 15:34:37,746] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:34:37,791] {logging_mixin.py:104} INFO - [2023-06-16 15:34:37,790] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:34:37,815] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.817 seconds
+[2023-06-16 15:35:08,513] {scheduler_job.py:182} INFO - Started process (PID=53) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:35:08,517] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:35:08,520] {logging_mixin.py:104} INFO - [2023-06-16 15:35:08,520] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:35:08,905] {logging_mixin.py:104} INFO - [2023-06-16 15:35:08,888] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/hello_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/hello_dag.py", line 9, in <module>
+    from lambda_handler import *
+  File "/opt/airflow/dags/lambda_handler.py", line 1, in <module>
+    lambda_client = boto3.client('lambda')
+NameError: name 'boto3' is not defined
+[2023-06-16 15:35:08,908] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:35:08,950] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.447 seconds
+[2023-06-16 15:35:39,099] {scheduler_job.py:182} INFO - Started process (PID=55) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:35:39,104] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:35:39,106] {logging_mixin.py:104} INFO - [2023-06-16 15:35:39,106] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:35:39,525] {logging_mixin.py:104} INFO - [2023-06-16 15:35:39,525] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:35:39,700] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:35:39,752] {logging_mixin.py:104} INFO - [2023-06-16 15:35:39,751] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:35:39,796] {logging_mixin.py:104} INFO - [2023-06-16 15:35:39,795] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:35:39,818] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.728 seconds
+[2023-06-16 15:36:10,224] {scheduler_job.py:182} INFO - Started process (PID=57) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:36:10,230] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:36:10,234] {logging_mixin.py:104} INFO - [2023-06-16 15:36:10,232] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:36:10,648] {logging_mixin.py:104} INFO - [2023-06-16 15:36:10,646] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:36:10,836] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:36:10,886] {logging_mixin.py:104} INFO - [2023-06-16 15:36:10,886] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:36:10,940] {logging_mixin.py:104} INFO - [2023-06-16 15:36:10,940] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:36:10,956] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.746 seconds
+[2023-06-16 15:36:41,261] {scheduler_job.py:182} INFO - Started process (PID=59) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:36:41,268] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:36:41,273] {logging_mixin.py:104} INFO - [2023-06-16 15:36:41,272] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:36:41,707] {logging_mixin.py:104} INFO - [2023-06-16 15:36:41,706] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:36:41,915] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:36:41,974] {logging_mixin.py:104} INFO - [2023-06-16 15:36:41,973] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:36:42,045] {logging_mixin.py:104} INFO - [2023-06-16 15:36:42,044] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:36:42,062] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.816 seconds
+[2023-06-16 15:37:12,664] {scheduler_job.py:182} INFO - Started process (PID=61) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:37:12,670] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:37:12,674] {logging_mixin.py:104} INFO - [2023-06-16 15:37:12,673] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:37:13,374] {logging_mixin.py:104} INFO - [2023-06-16 15:37:13,373] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:37:13,594] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:37:13,742] {logging_mixin.py:104} INFO - [2023-06-16 15:37:13,741] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:37:13,813] {logging_mixin.py:104} INFO - [2023-06-16 15:37:13,812] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:37:13,843] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 1.190 seconds
+[2023-06-16 15:37:44,186] {scheduler_job.py:182} INFO - Started process (PID=63) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:37:44,190] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:37:44,192] {logging_mixin.py:104} INFO - [2023-06-16 15:37:44,192] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:37:44,672] {logging_mixin.py:104} INFO - [2023-06-16 15:37:44,671] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:37:44,867] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:37:44,917] {logging_mixin.py:104} INFO - [2023-06-16 15:37:44,916] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:37:44,971] {logging_mixin.py:104} INFO - [2023-06-16 15:37:44,970] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:37:44,988] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.811 seconds
+[2023-06-16 15:38:15,454] {scheduler_job.py:182} INFO - Started process (PID=65) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:38:15,460] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:38:15,463] {logging_mixin.py:104} INFO - [2023-06-16 15:38:15,462] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:38:15,907] {logging_mixin.py:104} INFO - [2023-06-16 15:38:15,906] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:38:16,080] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:38:16,152] {logging_mixin.py:104} INFO - [2023-06-16 15:38:16,152] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:38:16,199] {logging_mixin.py:104} INFO - [2023-06-16 15:38:16,198] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:38:16,215] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.774 seconds
+[2023-06-16 15:38:46,592] {scheduler_job.py:182} INFO - Started process (PID=67) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:38:46,596] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:38:46,598] {logging_mixin.py:104} INFO - [2023-06-16 15:38:46,598] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:38:47,030] {logging_mixin.py:104} INFO - [2023-06-16 15:38:47,030] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:38:47,217] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:38:47,306] {logging_mixin.py:104} INFO - [2023-06-16 15:38:47,305] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:38:47,356] {logging_mixin.py:104} INFO - [2023-06-16 15:38:47,355] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:38:47,382] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.799 seconds
+[2023-06-16 15:39:17,584] {scheduler_job.py:182} INFO - Started process (PID=69) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:39:17,591] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:39:17,594] {logging_mixin.py:104} INFO - [2023-06-16 15:39:17,594] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:39:17,981] {logging_mixin.py:104} INFO - [2023-06-16 15:39:17,980] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:39:18,166] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:39:18,242] {logging_mixin.py:104} INFO - [2023-06-16 15:39:18,241] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:39:18,298] {logging_mixin.py:104} INFO - [2023-06-16 15:39:18,298] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:39:18,315] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.741 seconds
+[2023-06-16 15:39:48,733] {scheduler_job.py:182} INFO - Started process (PID=71) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:39:48,738] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:39:48,740] {logging_mixin.py:104} INFO - [2023-06-16 15:39:48,740] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:39:49,275] {logging_mixin.py:104} INFO - [2023-06-16 15:39:49,275] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:39:49,450] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:39:49,503] {logging_mixin.py:104} INFO - [2023-06-16 15:39:49,503] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:39:49,562] {logging_mixin.py:104} INFO - [2023-06-16 15:39:49,561] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:39:49,581] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.859 seconds
+[2023-06-16 15:40:19,817] {scheduler_job.py:182} INFO - Started process (PID=73) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:40:19,822] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:40:19,825] {logging_mixin.py:104} INFO - [2023-06-16 15:40:19,825] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:40:20,252] {logging_mixin.py:104} INFO - [2023-06-16 15:40:20,251] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:40:20,421] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:40:20,469] {logging_mixin.py:104} INFO - [2023-06-16 15:40:20,469] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:40:20,515] {logging_mixin.py:104} INFO - [2023-06-16 15:40:20,515] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:40:20,537] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.733 seconds
+[2023-06-16 15:40:51,186] {scheduler_job.py:182} INFO - Started process (PID=75) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:40:51,191] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:40:51,194] {logging_mixin.py:104} INFO - [2023-06-16 15:40:51,194] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:40:51,577] {logging_mixin.py:104} INFO - [2023-06-16 15:40:51,577] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:40:51,755] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:40:51,807] {logging_mixin.py:104} INFO - [2023-06-16 15:40:51,806] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:40:51,870] {logging_mixin.py:104} INFO - [2023-06-16 15:40:51,869] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:40:51,903] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.729 seconds
+[2023-06-16 15:41:22,289] {scheduler_job.py:182} INFO - Started process (PID=77) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:41:22,293] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:41:22,295] {logging_mixin.py:104} INFO - [2023-06-16 15:41:22,295] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:41:22,681] {logging_mixin.py:104} INFO - [2023-06-16 15:41:22,680] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:41:22,854] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:41:22,901] {logging_mixin.py:104} INFO - [2023-06-16 15:41:22,901] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:41:22,964] {logging_mixin.py:104} INFO - [2023-06-16 15:41:22,964] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:41:22,989] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.712 seconds
+[2023-06-16 15:41:53,156] {scheduler_job.py:182} INFO - Started process (PID=79) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:41:53,161] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:41:53,164] {logging_mixin.py:104} INFO - [2023-06-16 15:41:53,164] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:41:53,557] {logging_mixin.py:104} INFO - [2023-06-16 15:41:53,557] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:41:53,726] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:41:53,785] {logging_mixin.py:104} INFO - [2023-06-16 15:41:53,785] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:41:53,833] {logging_mixin.py:104} INFO - [2023-06-16 15:41:53,833] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:41:53,848] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.705 seconds
+[2023-06-16 15:42:24,256] {scheduler_job.py:182} INFO - Started process (PID=81) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:42:24,263] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:42:24,266] {logging_mixin.py:104} INFO - [2023-06-16 15:42:24,266] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:42:24,656] {logging_mixin.py:104} INFO - [2023-06-16 15:42:24,656] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:42:24,838] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:42:24,888] {logging_mixin.py:104} INFO - [2023-06-16 15:42:24,888] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:42:24,947] {logging_mixin.py:104} INFO - [2023-06-16 15:42:24,947] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:42:24,971] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.741 seconds
+[2023-06-16 15:42:55,480] {scheduler_job.py:182} INFO - Started process (PID=83) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:42:55,485] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:42:55,488] {logging_mixin.py:104} INFO - [2023-06-16 15:42:55,488] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:42:55,924] {logging_mixin.py:104} INFO - [2023-06-16 15:42:55,923] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:42:56,106] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:42:56,163] {logging_mixin.py:104} INFO - [2023-06-16 15:42:56,163] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:42:56,217] {logging_mixin.py:104} INFO - [2023-06-16 15:42:56,217] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:42:56,234] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.768 seconds
+[2023-06-16 15:43:26,646] {scheduler_job.py:182} INFO - Started process (PID=85) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:43:26,651] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:43:26,655] {logging_mixin.py:104} INFO - [2023-06-16 15:43:26,654] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:43:27,083] {logging_mixin.py:104} INFO - [2023-06-16 15:43:27,083] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:43:27,255] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:43:27,305] {logging_mixin.py:104} INFO - [2023-06-16 15:43:27,305] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:43:27,351] {logging_mixin.py:104} INFO - [2023-06-16 15:43:27,351] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:43:27,380] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.749 seconds
+[2023-06-16 15:43:57,758] {scheduler_job.py:182} INFO - Started process (PID=87) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:43:57,764] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:43:57,767] {logging_mixin.py:104} INFO - [2023-06-16 15:43:57,766] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:43:58,193] {logging_mixin.py:104} INFO - [2023-06-16 15:43:58,192] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:43:58,364] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:43:58,420] {logging_mixin.py:104} INFO - [2023-06-16 15:43:58,420] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:43:58,475] {logging_mixin.py:104} INFO - [2023-06-16 15:43:58,474] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:43:58,490] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.744 seconds
+[2023-06-16 15:44:28,968] {scheduler_job.py:182} INFO - Started process (PID=89) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:44:28,973] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:44:28,976] {logging_mixin.py:104} INFO - [2023-06-16 15:44:28,975] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:44:29,424] {logging_mixin.py:104} INFO - [2023-06-16 15:44:29,423] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:44:29,619] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:44:29,671] {logging_mixin.py:104} INFO - [2023-06-16 15:44:29,671] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:44:29,717] {logging_mixin.py:104} INFO - [2023-06-16 15:44:29,716] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:44:29,732] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.775 seconds
+[2023-06-16 15:45:00,081] {scheduler_job.py:182} INFO - Started process (PID=91) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:45:00,086] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:45:00,088] {logging_mixin.py:104} INFO - [2023-06-16 15:45:00,088] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:45:00,517] {logging_mixin.py:104} INFO - [2023-06-16 15:45:00,516] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:45:00,685] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:45:00,741] {logging_mixin.py:104} INFO - [2023-06-16 15:45:00,741] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:45:00,807] {logging_mixin.py:104} INFO - [2023-06-16 15:45:00,806] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:45:00,825] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.754 seconds
+[2023-06-16 15:45:30,961] {scheduler_job.py:182} INFO - Started process (PID=93) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:45:30,967] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:45:30,970] {logging_mixin.py:104} INFO - [2023-06-16 15:45:30,969] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:45:31,387] {logging_mixin.py:104} INFO - [2023-06-16 15:45:31,387] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:45:31,558] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:45:31,613] {logging_mixin.py:104} INFO - [2023-06-16 15:45:31,613] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:45:31,668] {logging_mixin.py:104} INFO - [2023-06-16 15:45:31,667] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:45:31,684] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.736 seconds
+[2023-06-16 15:46:02,029] {scheduler_job.py:182} INFO - Started process (PID=95) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:46:02,034] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:46:02,037] {logging_mixin.py:104} INFO - [2023-06-16 15:46:02,037] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:46:02,481] {logging_mixin.py:104} INFO - [2023-06-16 15:46:02,480] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:46:02,657] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:46:02,727] {logging_mixin.py:104} INFO - [2023-06-16 15:46:02,727] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:46:02,777] {logging_mixin.py:104} INFO - [2023-06-16 15:46:02,776] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:46:02,796] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.783 seconds
+[2023-06-16 15:46:33,266] {scheduler_job.py:182} INFO - Started process (PID=97) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:46:33,270] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:46:33,273] {logging_mixin.py:104} INFO - [2023-06-16 15:46:33,272] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:46:33,692] {logging_mixin.py:104} INFO - [2023-06-16 15:46:33,691] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:46:33,868] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:46:33,931] {logging_mixin.py:104} INFO - [2023-06-16 15:46:33,931] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:46:33,979] {logging_mixin.py:104} INFO - [2023-06-16 15:46:33,978] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:46:33,996] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.742 seconds
+[2023-06-16 15:47:04,424] {scheduler_job.py:182} INFO - Started process (PID=99) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:47:04,429] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:47:04,432] {logging_mixin.py:104} INFO - [2023-06-16 15:47:04,431] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:47:04,849] {logging_mixin.py:104} INFO - [2023-06-16 15:47:04,848] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:47:05,034] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:47:05,091] {logging_mixin.py:104} INFO - [2023-06-16 15:47:05,090] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:47:05,138] {logging_mixin.py:104} INFO - [2023-06-16 15:47:05,137] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:47:05,159] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.748 seconds
+[2023-06-16 15:47:35,574] {scheduler_job.py:182} INFO - Started process (PID=101) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:47:35,580] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:47:35,582] {logging_mixin.py:104} INFO - [2023-06-16 15:47:35,582] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:47:36,039] {logging_mixin.py:104} INFO - [2023-06-16 15:47:36,038] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:47:36,214] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:47:36,265] {logging_mixin.py:104} INFO - [2023-06-16 15:47:36,265] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:47:36,311] {logging_mixin.py:104} INFO - [2023-06-16 15:47:36,310] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:47:36,327] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.766 seconds
+[2023-06-16 15:48:06,828] {scheduler_job.py:182} INFO - Started process (PID=103) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:48:06,833] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:48:06,836] {logging_mixin.py:104} INFO - [2023-06-16 15:48:06,835] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:48:07,260] {logging_mixin.py:104} INFO - [2023-06-16 15:48:07,259] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:48:07,438] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:48:07,495] {logging_mixin.py:104} INFO - [2023-06-16 15:48:07,495] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:48:07,539] {logging_mixin.py:104} INFO - [2023-06-16 15:48:07,539] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:48:07,555] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.742 seconds
+[2023-06-16 15:48:37,943] {scheduler_job.py:182} INFO - Started process (PID=105) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:48:37,948] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:48:37,951] {logging_mixin.py:104} INFO - [2023-06-16 15:48:37,950] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:48:38,386] {logging_mixin.py:104} INFO - [2023-06-16 15:48:38,386] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:48:38,569] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:48:38,621] {logging_mixin.py:104} INFO - [2023-06-16 15:48:38,621] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:48:38,671] {logging_mixin.py:104} INFO - [2023-06-16 15:48:38,671] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:48:38,687] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.757 seconds
+[2023-06-16 15:49:08,752] {scheduler_job.py:182} INFO - Started process (PID=107) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:49:08,757] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:49:08,760] {logging_mixin.py:104} INFO - [2023-06-16 15:49:08,759] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:49:09,165] {logging_mixin.py:104} INFO - [2023-06-16 15:49:09,165] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:49:09,344] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:49:09,394] {logging_mixin.py:104} INFO - [2023-06-16 15:49:09,394] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:49:09,437] {logging_mixin.py:104} INFO - [2023-06-16 15:49:09,436] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:49:09,453] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.711 seconds
+[2023-06-16 15:49:39,870] {scheduler_job.py:182} INFO - Started process (PID=109) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:49:39,876] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:49:39,879] {logging_mixin.py:104} INFO - [2023-06-16 15:49:39,879] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:49:40,280] {logging_mixin.py:104} INFO - [2023-06-16 15:49:40,280] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:49:40,458] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:49:40,526] {logging_mixin.py:104} INFO - [2023-06-16 15:49:40,526] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:49:40,572] {logging_mixin.py:104} INFO - [2023-06-16 15:49:40,572] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:49:40,588] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.733 seconds
+[2023-06-16 15:50:11,047] {scheduler_job.py:182} INFO - Started process (PID=111) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:50:11,053] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:50:11,056] {logging_mixin.py:104} INFO - [2023-06-16 15:50:11,056] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:50:11,473] {logging_mixin.py:104} INFO - [2023-06-16 15:50:11,472] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:50:11,652] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:50:11,716] {logging_mixin.py:104} INFO - [2023-06-16 15:50:11,716] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:50:11,761] {logging_mixin.py:104} INFO - [2023-06-16 15:50:11,761] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:50:11,777] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.743 seconds
+[2023-06-16 15:50:42,181] {scheduler_job.py:182} INFO - Started process (PID=113) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:50:42,188] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:50:42,192] {logging_mixin.py:104} INFO - [2023-06-16 15:50:42,192] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:50:42,606] {logging_mixin.py:104} INFO - [2023-06-16 15:50:42,606] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:50:42,777] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:50:42,834] {logging_mixin.py:104} INFO - [2023-06-16 15:50:42,833] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:50:42,893] {logging_mixin.py:104} INFO - [2023-06-16 15:50:42,893] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:50:42,925] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.759 seconds
+[2023-06-16 15:51:13,195] {scheduler_job.py:182} INFO - Started process (PID=115) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:51:13,201] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:51:13,204] {logging_mixin.py:104} INFO - [2023-06-16 15:51:13,204] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:51:13,630] {logging_mixin.py:104} INFO - [2023-06-16 15:51:13,629] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:51:13,826] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:51:13,886] {logging_mixin.py:104} INFO - [2023-06-16 15:51:13,885] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:51:13,930] {logging_mixin.py:104} INFO - [2023-06-16 15:51:13,930] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:51:13,945] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.775 seconds
+[2023-06-16 15:51:44,389] {scheduler_job.py:182} INFO - Started process (PID=117) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:51:44,395] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:51:44,398] {logging_mixin.py:104} INFO - [2023-06-16 15:51:44,397] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:51:44,807] {logging_mixin.py:104} INFO - [2023-06-16 15:51:44,806] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:51:45,055] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:51:45,109] {logging_mixin.py:104} INFO - [2023-06-16 15:51:45,108] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:51:45,153] {logging_mixin.py:104} INFO - [2023-06-16 15:51:45,153] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:51:45,171] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.805 seconds
+[2023-06-16 15:52:15,289] {scheduler_job.py:182} INFO - Started process (PID=119) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:52:15,294] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:52:15,297] {logging_mixin.py:104} INFO - [2023-06-16 15:52:15,297] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:52:15,820] {logging_mixin.py:104} INFO - [2023-06-16 15:52:15,819] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:52:16,011] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:52:16,073] {logging_mixin.py:104} INFO - [2023-06-16 15:52:16,072] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:52:16,134] {logging_mixin.py:104} INFO - [2023-06-16 15:52:16,133] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:52:16,149] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.875 seconds
+[2023-06-16 15:52:46,774] {scheduler_job.py:182} INFO - Started process (PID=121) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:52:46,780] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:52:46,783] {logging_mixin.py:104} INFO - [2023-06-16 15:52:46,782] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:52:47,238] {logging_mixin.py:104} INFO - [2023-06-16 15:52:47,237] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:52:47,411] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:52:47,457] {logging_mixin.py:104} INFO - [2023-06-16 15:52:47,456] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:52:47,498] {logging_mixin.py:104} INFO - [2023-06-16 15:52:47,497] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:52:47,512] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.748 seconds
+[2023-06-16 15:53:17,925] {scheduler_job.py:182} INFO - Started process (PID=123) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:53:17,929] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:53:17,931] {logging_mixin.py:104} INFO - [2023-06-16 15:53:17,931] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:53:18,377] {logging_mixin.py:104} INFO - [2023-06-16 15:53:18,377] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:53:18,561] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:53:18,632] {logging_mixin.py:104} INFO - [2023-06-16 15:53:18,631] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:53:18,693] {logging_mixin.py:104} INFO - [2023-06-16 15:53:18,693] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:53:18,720] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.805 seconds
+[2023-06-16 15:53:49,104] {scheduler_job.py:182} INFO - Started process (PID=125) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:53:49,117] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:53:49,120] {logging_mixin.py:104} INFO - [2023-06-16 15:53:49,120] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:53:49,528] {logging_mixin.py:104} INFO - [2023-06-16 15:53:49,527] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:53:49,703] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:53:49,753] {logging_mixin.py:104} INFO - [2023-06-16 15:53:49,752] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:53:49,818] {logging_mixin.py:104} INFO - [2023-06-16 15:53:49,817] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:53:49,833] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.744 seconds
+[2023-06-16 15:54:20,248] {scheduler_job.py:182} INFO - Started process (PID=127) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:54:20,253] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:54:20,258] {logging_mixin.py:104} INFO - [2023-06-16 15:54:20,258] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:54:20,720] {logging_mixin.py:104} INFO - [2023-06-16 15:54:20,719] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:54:20,890] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:54:20,943] {logging_mixin.py:104} INFO - [2023-06-16 15:54:20,943] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:54:20,996] {logging_mixin.py:104} INFO - [2023-06-16 15:54:20,996] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:54:21,011] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.782 seconds
+[2023-06-16 15:54:51,438] {scheduler_job.py:182} INFO - Started process (PID=129) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:54:51,447] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:54:51,453] {logging_mixin.py:104} INFO - [2023-06-16 15:54:51,452] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:54:51,853] {logging_mixin.py:104} INFO - [2023-06-16 15:54:51,852] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:54:52,038] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:54:52,093] {logging_mixin.py:104} INFO - [2023-06-16 15:54:52,092] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:54:52,136] {logging_mixin.py:104} INFO - [2023-06-16 15:54:52,136] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:54:52,151] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.723 seconds
+[2023-06-16 15:55:22,588] {scheduler_job.py:182} INFO - Started process (PID=131) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:55:22,599] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:55:22,602] {logging_mixin.py:104} INFO - [2023-06-16 15:55:22,602] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:55:23,029] {logging_mixin.py:104} INFO - [2023-06-16 15:55:23,028] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:55:23,224] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:55:23,301] {logging_mixin.py:104} INFO - [2023-06-16 15:55:23,300] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:55:23,359] {logging_mixin.py:104} INFO - [2023-06-16 15:55:23,359] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:55:23,375] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.806 seconds
+[2023-06-16 15:55:53,576] {scheduler_job.py:182} INFO - Started process (PID=133) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:55:53,582] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:55:53,585] {logging_mixin.py:104} INFO - [2023-06-16 15:55:53,584] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:55:53,991] {logging_mixin.py:104} INFO - [2023-06-16 15:55:53,990] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:55:54,161] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:55:54,215] {logging_mixin.py:104} INFO - [2023-06-16 15:55:54,215] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:55:54,258] {logging_mixin.py:104} INFO - [2023-06-16 15:55:54,258] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:55:54,274] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.712 seconds
+[2023-06-16 15:56:24,685] {scheduler_job.py:182} INFO - Started process (PID=135) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:56:24,689] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:56:24,692] {logging_mixin.py:104} INFO - [2023-06-16 15:56:24,691] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:56:25,092] {logging_mixin.py:104} INFO - [2023-06-16 15:56:25,091] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:56:25,265] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:56:25,316] {logging_mixin.py:104} INFO - [2023-06-16 15:56:25,315] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:56:25,359] {logging_mixin.py:104} INFO - [2023-06-16 15:56:25,358] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:56:25,374] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.698 seconds
+[2023-06-16 15:56:55,935] {scheduler_job.py:182} INFO - Started process (PID=137) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:56:55,942] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:56:55,944] {logging_mixin.py:104} INFO - [2023-06-16 15:56:55,944] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:56:56,326] {logging_mixin.py:104} INFO - [2023-06-16 15:56:56,326] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:56:56,508] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:56:56,561] {logging_mixin.py:104} INFO - [2023-06-16 15:56:56,560] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:56:56,604] {logging_mixin.py:104} INFO - [2023-06-16 15:56:56,604] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:56:56,619] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.697 seconds
+[2023-06-16 15:57:27,038] {scheduler_job.py:182} INFO - Started process (PID=139) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:57:27,043] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:57:27,046] {logging_mixin.py:104} INFO - [2023-06-16 15:57:27,046] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:57:27,464] {logging_mixin.py:104} INFO - [2023-06-16 15:57:27,464] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:57:27,646] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:57:27,707] {logging_mixin.py:104} INFO - [2023-06-16 15:57:27,707] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:57:27,751] {logging_mixin.py:104} INFO - [2023-06-16 15:57:27,750] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:57:27,766] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.741 seconds
+[2023-06-16 15:57:57,894] {scheduler_job.py:182} INFO - Started process (PID=141) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:57:57,900] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:57:57,905] {logging_mixin.py:104} INFO - [2023-06-16 15:57:57,904] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:57:58,325] {logging_mixin.py:104} INFO - [2023-06-16 15:57:58,324] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:57:58,490] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:57:58,538] {logging_mixin.py:104} INFO - [2023-06-16 15:57:58,538] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:57:58,581] {logging_mixin.py:104} INFO - [2023-06-16 15:57:58,580] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:57:58,596] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.710 seconds
+[2023-06-16 15:58:28,981] {scheduler_job.py:182} INFO - Started process (PID=143) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:58:28,987] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:58:28,990] {logging_mixin.py:104} INFO - [2023-06-16 15:58:28,989] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:58:29,440] {logging_mixin.py:104} INFO - [2023-06-16 15:58:29,439] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:58:29,616] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:58:29,669] {logging_mixin.py:104} INFO - [2023-06-16 15:58:29,668] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:58:29,713] {logging_mixin.py:104} INFO - [2023-06-16 15:58:29,712] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:58:29,728] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.761 seconds
+[2023-06-16 15:59:00,250] {scheduler_job.py:182} INFO - Started process (PID=145) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:59:00,257] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:59:00,260] {logging_mixin.py:104} INFO - [2023-06-16 15:59:00,259] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:59:00,640] {logging_mixin.py:104} INFO - [2023-06-16 15:59:00,639] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:59:00,827] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:59:00,878] {logging_mixin.py:104} INFO - [2023-06-16 15:59:00,877] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:59:00,923] {logging_mixin.py:104} INFO - [2023-06-16 15:59:00,923] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:59:00,940] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.703 seconds
+[2023-06-16 15:59:31,352] {scheduler_job.py:182} INFO - Started process (PID=147) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:59:31,361] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 15:59:31,364] {logging_mixin.py:104} INFO - [2023-06-16 15:59:31,364] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:59:31,772] {logging_mixin.py:104} INFO - [2023-06-16 15:59:31,772] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 15:59:31,954] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 15:59:32,005] {logging_mixin.py:104} INFO - [2023-06-16 15:59:32,004] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 15:59:32,053] {logging_mixin.py:104} INFO - [2023-06-16 15:59:32,053] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 15:59:32,069] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.731 seconds
+[2023-06-16 16:00:02,253] {scheduler_job.py:182} INFO - Started process (PID=149) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:00:02,258] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:00:02,261] {logging_mixin.py:104} INFO - [2023-06-16 16:00:02,260] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:00:02,686] {logging_mixin.py:104} INFO - [2023-06-16 16:00:02,685] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:00:02,857] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:00:02,909] {logging_mixin.py:104} INFO - [2023-06-16 16:00:02,909] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:00:02,955] {logging_mixin.py:104} INFO - [2023-06-16 16:00:02,955] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:00:02,971] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.732 seconds
+[2023-06-16 16:00:33,355] {scheduler_job.py:182} INFO - Started process (PID=151) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:00:33,360] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:00:33,363] {logging_mixin.py:104} INFO - [2023-06-16 16:00:33,362] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:00:33,758] {logging_mixin.py:104} INFO - [2023-06-16 16:00:33,758] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:00:33,938] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:00:33,988] {logging_mixin.py:104} INFO - [2023-06-16 16:00:33,988] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:00:34,032] {logging_mixin.py:104} INFO - [2023-06-16 16:00:34,032] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:00:34,048] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.705 seconds
+[2023-06-16 16:01:04,572] {scheduler_job.py:182} INFO - Started process (PID=153) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:01:04,577] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:01:04,580] {logging_mixin.py:104} INFO - [2023-06-16 16:01:04,579] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:01:04,968] {logging_mixin.py:104} INFO - [2023-06-16 16:01:04,968] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:01:05,137] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:01:05,188] {logging_mixin.py:104} INFO - [2023-06-16 16:01:05,187] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:01:05,245] {logging_mixin.py:104} INFO - [2023-06-16 16:01:05,245] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:01:05,261] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.703 seconds
+[2023-06-16 16:01:35,689] {scheduler_job.py:182} INFO - Started process (PID=155) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:01:35,693] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:01:35,696] {logging_mixin.py:104} INFO - [2023-06-16 16:01:35,696] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:01:36,100] {logging_mixin.py:104} INFO - [2023-06-16 16:01:36,100] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:01:36,269] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:01:36,318] {logging_mixin.py:104} INFO - [2023-06-16 16:01:36,318] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:01:36,363] {logging_mixin.py:104} INFO - [2023-06-16 16:01:36,363] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:01:36,394] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.716 seconds
+[2023-06-16 16:02:06,614] {scheduler_job.py:182} INFO - Started process (PID=157) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:02:06,620] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:02:06,623] {logging_mixin.py:104} INFO - [2023-06-16 16:02:06,622] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:02:07,050] {logging_mixin.py:104} INFO - [2023-06-16 16:02:07,050] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:02:07,242] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:02:07,303] {logging_mixin.py:104} INFO - [2023-06-16 16:02:07,303] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:02:07,348] {logging_mixin.py:104} INFO - [2023-06-16 16:02:07,347] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:02:07,363] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.762 seconds
+[2023-06-16 16:02:37,897] {scheduler_job.py:182} INFO - Started process (PID=159) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:02:37,905] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:02:37,908] {logging_mixin.py:104} INFO - [2023-06-16 16:02:37,908] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:02:38,392] {logging_mixin.py:104} INFO - [2023-06-16 16:02:38,392] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:02:38,578] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:02:38,640] {logging_mixin.py:104} INFO - [2023-06-16 16:02:38,639] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:02:38,682] {logging_mixin.py:104} INFO - [2023-06-16 16:02:38,682] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:02:38,696] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.813 seconds
+[2023-06-16 16:03:09,143] {scheduler_job.py:182} INFO - Started process (PID=161) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:03:09,148] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:03:09,152] {logging_mixin.py:104} INFO - [2023-06-16 16:03:09,151] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:03:09,570] {logging_mixin.py:104} INFO - [2023-06-16 16:03:09,569] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:03:09,744] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:03:09,798] {logging_mixin.py:104} INFO - [2023-06-16 16:03:09,798] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:03:09,847] {logging_mixin.py:104} INFO - [2023-06-16 16:03:09,846] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:03:09,872] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.744 seconds
+[2023-06-16 16:03:40,211] {scheduler_job.py:182} INFO - Started process (PID=163) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:03:40,218] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:03:40,222] {logging_mixin.py:104} INFO - [2023-06-16 16:03:40,222] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:03:40,645] {logging_mixin.py:104} INFO - [2023-06-16 16:03:40,644] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:03:40,824] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:03:40,893] {logging_mixin.py:104} INFO - [2023-06-16 16:03:40,892] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:03:40,942] {logging_mixin.py:104} INFO - [2023-06-16 16:03:40,942] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:03:40,958] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.772 seconds
+[2023-06-16 16:04:11,369] {scheduler_job.py:182} INFO - Started process (PID=165) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:04:11,376] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:04:11,379] {logging_mixin.py:104} INFO - [2023-06-16 16:04:11,379] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:04:11,773] {logging_mixin.py:104} INFO - [2023-06-16 16:04:11,773] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:04:11,950] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:04:12,007] {logging_mixin.py:104} INFO - [2023-06-16 16:04:12,007] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:04:12,060] {logging_mixin.py:104} INFO - [2023-06-16 16:04:12,060] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:04:12,083] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.730 seconds
+[2023-06-16 16:04:42,337] {scheduler_job.py:182} INFO - Started process (PID=167) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:04:42,342] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:04:42,346] {logging_mixin.py:104} INFO - [2023-06-16 16:04:42,346] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:04:42,727] {logging_mixin.py:104} INFO - [2023-06-16 16:04:42,727] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:04:42,891] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:04:42,949] {logging_mixin.py:104} INFO - [2023-06-16 16:04:42,949] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:04:42,992] {logging_mixin.py:104} INFO - [2023-06-16 16:04:42,992] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:04:43,007] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.686 seconds
+[2023-06-16 16:05:13,349] {scheduler_job.py:182} INFO - Started process (PID=169) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:05:13,354] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:05:13,356] {logging_mixin.py:104} INFO - [2023-06-16 16:05:13,356] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:05:13,735] {logging_mixin.py:104} INFO - [2023-06-16 16:05:13,735] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:05:13,898] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:05:13,946] {logging_mixin.py:104} INFO - [2023-06-16 16:05:13,946] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:05:13,993] {logging_mixin.py:104} INFO - [2023-06-16 16:05:13,992] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:05:14,007] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.667 seconds
+[2023-06-16 16:05:44,383] {scheduler_job.py:182} INFO - Started process (PID=171) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:05:44,390] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:05:44,393] {logging_mixin.py:104} INFO - [2023-06-16 16:05:44,393] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:05:44,764] {logging_mixin.py:104} INFO - [2023-06-16 16:05:44,763] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:05:44,936] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:05:44,983] {logging_mixin.py:104} INFO - [2023-06-16 16:05:44,983] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:05:45,037] {logging_mixin.py:104} INFO - [2023-06-16 16:05:45,036] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:05:45,056] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.689 seconds
+[2023-06-16 16:06:15,442] {scheduler_job.py:182} INFO - Started process (PID=173) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:06:15,448] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:06:15,451] {logging_mixin.py:104} INFO - [2023-06-16 16:06:15,451] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:06:15,886] {logging_mixin.py:104} INFO - [2023-06-16 16:06:15,885] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:06:16,073] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:06:16,124] {logging_mixin.py:104} INFO - [2023-06-16 16:06:16,124] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:06:16,165] {logging_mixin.py:104} INFO - [2023-06-16 16:06:16,165] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:06:16,180] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.752 seconds
+[2023-06-16 16:06:46,319] {scheduler_job.py:182} INFO - Started process (PID=175) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:06:46,327] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:06:46,333] {logging_mixin.py:104} INFO - [2023-06-16 16:06:46,332] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:06:46,787] {logging_mixin.py:104} INFO - [2023-06-16 16:06:46,786] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:06:46,959] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:06:47,013] {logging_mixin.py:104} INFO - [2023-06-16 16:06:47,013] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:06:47,056] {logging_mixin.py:104} INFO - [2023-06-16 16:06:47,056] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:06:47,072] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.771 seconds
+[2023-06-16 16:07:17,404] {scheduler_job.py:182} INFO - Started process (PID=177) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:07:17,408] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:07:17,410] {logging_mixin.py:104} INFO - [2023-06-16 16:07:17,410] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:07:17,919] {logging_mixin.py:104} INFO - [2023-06-16 16:07:17,918] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:07:18,151] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:07:18,214] {logging_mixin.py:104} INFO - [2023-06-16 16:07:18,213] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:07:18,261] {logging_mixin.py:104} INFO - [2023-06-16 16:07:18,261] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:07:18,287] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.892 seconds
+[2023-06-16 16:07:48,693] {scheduler_job.py:182} INFO - Started process (PID=179) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:07:48,732] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:07:48,775] {logging_mixin.py:104} INFO - [2023-06-16 16:07:48,774] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:07:50,714] {logging_mixin.py:104} INFO - [2023-06-16 16:07:50,713] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:07:51,474] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:07:51,753] {logging_mixin.py:104} INFO - [2023-06-16 16:07:51,751] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:07:51,864] {logging_mixin.py:104} INFO - [2023-06-16 16:07:51,861] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:07:51,922] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 3.250 seconds
+[2023-06-16 16:08:22,176] {scheduler_job.py:182} INFO - Started process (PID=181) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:08:22,183] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:08:22,186] {logging_mixin.py:104} INFO - [2023-06-16 16:08:22,186] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:08:22,598] {logging_mixin.py:104} INFO - [2023-06-16 16:08:22,597] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:08:22,777] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:08:22,834] {logging_mixin.py:104} INFO - [2023-06-16 16:08:22,833] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:08:22,884] {logging_mixin.py:104} INFO - [2023-06-16 16:08:22,884] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:08:22,903] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.743 seconds
+[2023-06-16 16:08:53,339] {scheduler_job.py:182} INFO - Started process (PID=183) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:08:53,344] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:08:53,347] {logging_mixin.py:104} INFO - [2023-06-16 16:08:53,347] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:08:53,751] {logging_mixin.py:104} INFO - [2023-06-16 16:08:53,750] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:08:53,924] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:08:53,977] {logging_mixin.py:104} INFO - [2023-06-16 16:08:53,976] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:08:54,024] {logging_mixin.py:104} INFO - [2023-06-16 16:08:54,024] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:08:54,044] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.720 seconds
+[2023-06-16 16:09:24,231] {scheduler_job.py:182} INFO - Started process (PID=185) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:09:24,236] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:09:24,239] {logging_mixin.py:104} INFO - [2023-06-16 16:09:24,238] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:09:24,621] {logging_mixin.py:104} INFO - [2023-06-16 16:09:24,621] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:09:24,789] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:09:24,836] {logging_mixin.py:104} INFO - [2023-06-16 16:09:24,836] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:09:24,879] {logging_mixin.py:104} INFO - [2023-06-16 16:09:24,878] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:09:24,894] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.676 seconds
+[2023-06-16 16:09:55,264] {scheduler_job.py:182} INFO - Started process (PID=187) to work on /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:09:55,270] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/hello_dag.py for tasks to queue
+[2023-06-16 16:09:55,273] {logging_mixin.py:104} INFO - [2023-06-16 16:09:55,273] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:09:55,680] {logging_mixin.py:104} INFO - [2023-06-16 16:09:55,679] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-16 16:09:55,861] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['hello_world']) retrieved from /opt/airflow/dags/hello_dag.py
+[2023-06-16 16:09:55,925] {logging_mixin.py:104} INFO - [2023-06-16 16:09:55,924] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-16 16:09:55,972] {logging_mixin.py:104} INFO - [2023-06-16 16:09:55,972] {dag.py:2273} INFO - Setting next_dagrun for hello_world to None
+[2023-06-16 16:09:55,988] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/hello_dag.py took 0.739 seconds

@@ -2,7 +2,7 @@ import requests
 import json
 from requests.structures import CaseInsensitiveDict
 from requests.auth import HTTPBasicAuth
-from etl.extract_load.settings import client_id, client_secret
+from settings import client_id, client_secret
 from datetime import datetime, timedelta
 
 
@@ -40,19 +40,3 @@ class AmadeusClient:
           delta = timedelta(days=days)
           departureDate = datetime.today() + delta
         return departureDate
-
-    def search_and_write(self, origin, destination, departure_date = None):
-        departure = self.generate_departure_date(departure_date, days = 14)
-        flight_data = self.search_flights(origin, destination, 
-                                          departureDate = departure)
-        filename = self.generate_file_name(origin, destination, 
-                                           departure_date = departure)
-        self.write_to_file(flight_data, filename)
-
-    def write_to_file(self, json_data, filename):
-        with open(filename, "w") as outfile:
-            outfile.write(json.dumps(json_data))
-
-    def generate_file_name(self, origin, destination, departure_date, folder_name = './data'):
-        departure_date_str = departure_date.strftime('%Y-%m-%d')
-        return f"{folder_name}/{origin}-{destination}-{departure_date_str}.json"
