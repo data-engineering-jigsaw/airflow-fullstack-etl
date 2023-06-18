@@ -1,6 +1,7 @@
 import boto3
 import json
 from src.amadeus_client import AmadeusClient
+from datetime import datetime, timedelta
 s3 = boto3.client('s3')
 
 def search_and_write(origin, destination, departure_date = None):
@@ -12,17 +13,24 @@ def search_and_write(origin, destination, departure_date = None):
                                         departure_date = departure)
     write_to_file(flight_data, filename)
 
-def search_and_upload(origin, destination, dest_file, departure_date = None):
+def search_and_upload(origin, destination, dest_file, departure_date = datetime.today() + timedelta(days = 14)):
     client = AmadeusClient()
-    if not departure_date:
-        departure_date = client.generate_departure_date(departure_date, days = 14)
     flight_data = client.search_flights(origin, destination, 
                                         departureDate = departure_date)
     bucket_name = 'amadeusflightjigsaw'
     write_to_s3(flight_data, bucket_name, dest_file)
-    response = {'file': dest_file, 'flight_data': flight_data['data'][:20]}
+    response = {'file': dest_file, 'flight_data': flight_data['data'][:3]}
     print(response)
     return response
+
+def build_departure_date(departure_date_str):
+    # take in string, return datetime
+    if not departure_date_str:
+        departure_date = (datetime.today() + timedelta(days=14))
+    else:
+        departure_date = datetime.strptime(departure_date_str, "%Y-%m-%d")
+    return departure_date
+
 
 def write_to_s3(bucket_data, bucket_name, file_name):
     s3 = boto3.client('s3')
@@ -33,8 +41,8 @@ def write_to_file(json_data, filename):
     with open(filename, "w") as outfile:
         outfile.write(json.dumps(json_data))
 
-def generate_file_name(origin, destination, departure_date, folder_name = '/tmp'):
-    departure_date_str = departure_date.strftime('%Y-%m-%d')
+def generate_file_name(origin, destination, departure_date, folder_name = 'raw'):
+    departure_date_str = departure_date.strftime("%Y-%m-%d")
     return f"{folder_name}/{origin}-{destination}-{departure_date_str}.json"
 
 def read_and_upload(file_name, bucket_name, destination_object):
@@ -47,9 +55,8 @@ def read_data_from(bucket, object):
     data = json.loads(text)
     return data
 
-# alter the folder_name to /tmp (line 33)
+
 # fix dockerfile
 # find difference in files read, and read the next ones
-# and then can kick off the other 
-    # by passing through the event   
+   
 # https://docs.snowflake.com/en/user-guide/json-basics-tutorial-copy-into
