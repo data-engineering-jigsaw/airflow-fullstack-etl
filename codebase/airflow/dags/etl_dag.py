@@ -31,6 +31,7 @@ def etl_dag(origin, destination, departure_date_str = '2023-6-21'):
         return result
     
     file_name = generate_file_name(origin, destination, departure_date_str)
+    # print(file_name)
     data = extract_load_task(origin, destination, departure_date_str)
     result = transform_load_task(file_name_read = f'raw/{file_name}')
     data >> result

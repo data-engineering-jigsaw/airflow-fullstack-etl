@@ -20,24 +20,20 @@ class AmadeusClient:
         access_token = access_token_response.json()['access_token']
         return access_token
     
-    def generate_departure_date(self, departureDate = None, days = 14):
-        if not departureDate:
-          delta = timedelta(days=days)
-          departureDate = datetime.today() + delta
-        return departureDate
-    
-    def search_flights(self, origin, destination, departureDate = None):
+    def search_flights(self, origin, destination, departure_date_str):
+        departure_date = datetime.strptime(departure_date_str, "%Y-%m-%d").strftime("%Y-%m-%d")
+
         access_token = self.get_access_token()
         headers = CaseInsensitiveDict()
         headers['Authorization'] = f'Bearer {access_token}'
         url = 'https://test.api.amadeus.com/v2/shopping/flight-offers'
-
-        departureDate = self.generate_departure_date()
+        
         
         params = {'originLocationCode': origin,
                 'destinationLocationCode': destination,
-                'departureDate': departureDate.strftime('%Y-%m-%d'), 'adults': str(1)}
-        
+                'departureDate': departure_date,
+                  'adults': str(1)}
+        print(params)
         response = requests.get(url, params = params, headers=headers)
         return response.json()
 
