@@ -13,9 +13,10 @@ import logging
 default_args = {'start_date': days_ago(1)}
 
 @dag(schedule_interval='@once', default_args=default_args, catchup=False)
-def etl_dag(origin, destination, departure_date_str = '2023-6-21'):
+def etl_dag():
     @task
     def extract_load_task(origin, destination, departure_date_str):
+        
         result = extract_load(origin = origin, destination = destination, 
                               departure_date_str = departure_date_str)
         logging.info(f'extracting data from: {origin}, {destination}, departure: {departure_date_str}')
@@ -24,18 +25,21 @@ def etl_dag(origin, destination, departure_date_str = '2023-6-21'):
         return result
 
     @task
-    def transform_load_task(file_name_read = 'raw/NYC-CHI-2023-06-30.json'):
+    def transform_load_task(origin, destination, departure_date_str):
+        file_name = generate_file_name(origin, destination, departure_date_str)
+        # print(file_name)
+        file_name_read = f"raw/{file_name}"
         result = transform_load(file_name_read = file_name_read)
         logging.info(f'reading data from file: {file_name_read}')
         logging.info(f'transform load: {result}')
         return result
     
-    file_name = generate_file_name(origin, destination, departure_date_str)
-    # print(file_name)
+    origin = "NYC"
+    destination = "CHI"
+    departure_date_str = "2023-07-6"
     data = extract_load_task(origin, destination, departure_date_str)
-    result = transform_load_task(file_name_read = f'raw/{file_name}')
+    result = transform_load_task(origin, destination, departure_date_str)
     data >> result
 
 
-dag = etl_dag(origin = 'PHI', destination = 'CHI', departure_date_str='2023-7-4')
-
+dag = etl_dag()

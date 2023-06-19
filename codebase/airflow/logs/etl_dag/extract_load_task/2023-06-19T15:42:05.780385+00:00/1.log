@@ -1,0 +1,33 @@
+[2023-06-19 15:42:08,932] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: etl_dag.extract_load_task 2023-06-19T15:42:05.780385+00:00 [queued]>
+[2023-06-19 15:42:08,971] {taskinstance.py:851} INFO - Dependencies all met for <TaskInstance: etl_dag.extract_load_task 2023-06-19T15:42:05.780385+00:00 [queued]>
+[2023-06-19 15:42:08,972] {taskinstance.py:1042} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-19 15:42:08,973] {taskinstance.py:1043} INFO - Starting attempt 1 of 1
+[2023-06-19 15:42:08,974] {taskinstance.py:1044} INFO - 
+--------------------------------------------------------------------------------
+[2023-06-19 15:42:09,007] {taskinstance.py:1063} INFO - Executing <Task(_PythonDecoratedOperator): extract_load_task> on 2023-06-19T15:42:05.780385+00:00
+[2023-06-19 15:42:09,014] {standard_task_runner.py:52} INFO - Started process 89 to run task
+[2023-06-19 15:42:09,024] {standard_task_runner.py:76} INFO - Running: ['airflow', 'tasks', 'run', 'etl_dag', 'extract_load_task', '2023-06-19T15:42:05.780385+00:00', '--job-id', '168', '--pool', 'default_pool', '--raw', '--subdir', 'DAGS_FOLDER/etl_dag.py', '--cfg-path', '/tmp/tmpudsmd0_j', '--error-file', '/tmp/tmpoeqclv_5']
+[2023-06-19 15:42:09,026] {standard_task_runner.py:77} INFO - Job 168: Subtask extract_load_task
+[2023-06-19 15:42:09,167] {logging_mixin.py:104} INFO - Running <TaskInstance: etl_dag.extract_load_task 2023-06-19T15:42:05.780385+00:00 [running]> on host 7a62ecf52086
+[2023-06-19 15:42:09,366] {taskinstance.py:1257} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=airflow
+AIRFLOW_CTX_DAG_ID=etl_dag
+AIRFLOW_CTX_TASK_ID=extract_load_task
+AIRFLOW_CTX_EXECUTION_DATE=2023-06-19T15:42:05.780385+00:00
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-06-19T15:42:05.780385+00:00
+[2023-06-19 15:42:09,373] {taskinstance.py:1455} ERROR - 'str' object has no attribute '__dict__'
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1112, in _run_raw_task
+    self._prepare_and_execute_task_with_callbacks(context, task)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1285, in _prepare_and_execute_task_with_callbacks
+    result = self._execute_task(context, task_copy)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/taskinstance.py", line 1315, in _execute_task
+    result = task_copy.execute(context=context)
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/operators/python.py", line 233, in execute
+    return_value = self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/etl_dag.py", line 19, in extract_load_task
+    print(origin.__dict__)
+AttributeError: 'str' object has no attribute '__dict__'
+[2023-06-19 15:42:09,396] {taskinstance.py:1503} INFO - Marking task as FAILED. dag_id=etl_dag, task_id=extract_load_task, execution_date=20230619T154205, start_date=20230619T154208, end_date=20230619T154209
+[2023-06-19 15:42:09,527] {local_task_job.py:146} INFO - Task exited with return code 1

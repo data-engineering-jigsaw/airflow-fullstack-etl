@@ -5,7 +5,7 @@ import json
 
 def extract_load(origin, destination, departure_date_str):
     event = {"origin": origin,
-              "destination": "CHI",
+              "destination": destination,
                 "departure_date_str": departure_date_str}
     function_name = 'flights-app-dev-extract_load'
     response = lambda_client.invoke(
@@ -31,8 +31,8 @@ def transform_load(file_name_read):
 
 origin = "NYC"
 destination = "CHI"
-departure_date_str = "2023-07-27"
+departure_date_str = "2023-07-5"
 extract_load(origin = origin, destination = destination,
-              departure_date_str = departure_date_str)
-file_name = generate_file_name(origin, destination, departure_date_str)
-result = transform_load(file_name_read = f'raw/{file_name}')
+               departure_date_str = departure_date_str)
+# file_name = generate_file_name(origin, destination, departure_date_str)
+# result = transform_load(file_name_read = f'raw/{file_name}')
