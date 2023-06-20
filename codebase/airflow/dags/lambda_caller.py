@@ -17,17 +17,7 @@ def extract_load(origin, destination, departure_date_str):
     return response['ResponseMetadata']['RequestId']
 
 def transform_load(file_name_read):
-    function_name = 'flights-app-dev-transform_load'
-    event = {"file_name_read": file_name_read}
-    jsonified_event = json.dumps(event)
-    print(jsonified_event)
-    response = lambda_client.invoke(
-        FunctionName=function_name,
-        InvocationType='Event',  
-        Payload=jsonified_event
-    )
-    
-    return response['ResponseMetadata']['RequestId']
+    pass
 
 origin = "NYC"
 destination = "CHI"

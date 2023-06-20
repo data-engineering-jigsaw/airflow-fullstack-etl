@@ -6,19 +6,10 @@ from io import BytesIO
 
 class FlightsFileReader:
     def return_flights_from_bucket(self, bucket_name, obj_name):
-        flights_json = self.read_from_bucket(bucket_name, obj_name)
-        selected_flights = self.select_attributes(flights_json)
-        return selected_flights
+        pass
         
     def select_attributes(self, flights_json):
-        flights = flights_json['data']
-        selected_flights = []
-        
-        for flight_json in flights:
-            flight_adapter = AmadeusFlightAdapter(flight_json)
-            attrs = flight_adapter.select_attributes()
-            selected_flights.append(attrs)
-        return selected_flights
+        pass
     
     def read_from_bucket(self, bucket_name, obj_name):
         s3 = boto3.client('s3')

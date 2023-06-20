@@ -26,13 +26,7 @@ class AmadeusClient:
         headers['Authorization'] = f'Bearer {access_token}'
         url = 'https://test.api.amadeus.com/v2/shopping/flight-offers'
 
-        # remove below here 
-        departure_date = datetime.strptime(departure_date_str, "%Y-%m-%d").strftime("%Y-%m-%d")
-        params = {'originLocationCode': origin,
-                'destinationLocationCode': destination,
-                'departureDate': departure_date,
-                  'adults': str(1)}
-        response = requests.get(url, params = params, headers=headers)
-        return response.json()
+        # fill in the rest of the code here
+        
 
     

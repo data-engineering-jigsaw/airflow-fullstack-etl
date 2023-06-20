@@ -49,13 +49,10 @@ x-airflow-common:
     AIRFLOW__CORE__FERNET_KEY: ''
     AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: 'true'
     AIRFLOW__CORE__LOAD_EXAMPLES: 'false'
-    AWS_CONFIG_FILE: /usr/local/airflow/.aws
-    AWS_SHARED_CREDENTIALS_FILE: /usr/local/airflow/.aws/credentials
   volumes:
     - ./dags:/opt/airflow/dags
     - ./logs:/opt/airflow/logs
     - ./plugins:/opt/airflow/plugins
-    - /Users/jeffreykatz/.aws:/usr/local/airflow/.aws
   user: "${AIRFLOW_UID:-50000}:${AIRFLOW_GID:-50000}"
   depends_on:
     redis:
