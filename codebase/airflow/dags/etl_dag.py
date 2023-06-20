@@ -6,7 +6,7 @@ from airflow.decorators import task, dag
 from airflow.utils.dates import days_ago
 from airflow.utils.task_group import TaskGroup
 from datetime import datetime, timedelta
-from lambda_handler import *
+from lambda_caller import *
 from utils import *
 import logging
 
@@ -34,9 +34,9 @@ def etl_dag():
         logging.info(f'transform load: {result}')
         return result
     
-    origin = "NYC"
+    origin = "NYC" #"PHI"
     destination = "CHI"
-    departure_date_str = "2023-07-6"
+    departure_date_str = "2023-08-8"
     data = extract_load_task(origin, destination, departure_date_str)
     result = transform_load_task(origin, destination, departure_date_str)
     data >> result

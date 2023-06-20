@@ -15,8 +15,8 @@ def lambda_handler(event, context):
                                   file_name, departure_date_str)
     return response
 
-# context = {}
-# event = {'origin': 'NYC', 'destination': 'CHI',
-# 'departure_date_str': '2023-06-22'}
-# lambda_handler(event, context)
 
+
+# context = {}
+# event = {"origin": "NYC", "destination": "CHI", "departure_date_str": "2023-08-02"}
+# lambda_handler(event, context)

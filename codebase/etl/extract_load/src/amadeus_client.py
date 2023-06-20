@@ -21,19 +21,17 @@ class AmadeusClient:
         return access_token
     
     def search_flights(self, origin, destination, departure_date_str):
-        departure_date = datetime.strptime(departure_date_str, "%Y-%m-%d").strftime("%Y-%m-%d")
-
         access_token = self.get_access_token()
         headers = CaseInsensitiveDict()
         headers['Authorization'] = f'Bearer {access_token}'
         url = 'https://test.api.amadeus.com/v2/shopping/flight-offers'
-        
-        
+
+        # remove below here 
+        departure_date = datetime.strptime(departure_date_str, "%Y-%m-%d").strftime("%Y-%m-%d")
         params = {'originLocationCode': origin,
                 'destinationLocationCode': destination,
                 'departureDate': departure_date,
                   'adults': str(1)}
-        print(params)
         response = requests.get(url, params = params, headers=headers)
         return response.json()
 
