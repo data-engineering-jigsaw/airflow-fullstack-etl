@@ -11,11 +11,11 @@ def test_lambda_hander():
     
     lambda_handler(event, context)
     file_name = generate_file_name(origin, destination, departure_date_str)
-
-    bucket_name = 'amadeusflightsdata'
+    
+    bucket_name = 'amadeusflightjigsaw'
     bucket_data = read_data_from(bucket_name, file_name)
     first_instance_keys = ['type', 'id', 'source', 'instantTicketingRequired',
                              'nonHomogeneous', 'oneWay', 'lastTicketingDate', 'lastTicketingDateTime',
                                'numberOfBookableSeats', 'itineraries', 'price', 'pricingOptions', 'validatingAirlineCodes', 'travelerPricings']
-    assert list(bucket_data['flight_data'][0].keys()) == first_instance_keys
+    assert list(bucket_data['data'][0].keys()) == first_instance_keys
     

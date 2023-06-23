@@ -1,0 +1,80 @@
+[2023-06-23 00:45:51,724] {scheduler_job.py:182} INFO - Started process (PID=594) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:45:51,762] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:45:51,811] {logging_mixin.py:104} INFO - [2023-06-23 00:45:51,810] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:45:53,714] {logging_mixin.py:104} INFO - [2023-06-23 00:45:53,713] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:45:54,646] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:45:54,834] {logging_mixin.py:104} INFO - [2023-06-23 00:45:54,833] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:45:54,909] {logging_mixin.py:104} INFO - [2023-06-23 00:45:54,909] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:45:54,953] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 3.289 seconds
+[2023-06-23 00:46:25,145] {scheduler_job.py:182} INFO - Started process (PID=596) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:46:25,151] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:46:25,156] {logging_mixin.py:104} INFO - [2023-06-23 00:46:25,155] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:46:25,920] {logging_mixin.py:104} INFO - [2023-06-23 00:46:25,919] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:46:26,505] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:46:26,572] {logging_mixin.py:104} INFO - [2023-06-23 00:46:26,572] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:46:26,623] {logging_mixin.py:104} INFO - [2023-06-23 00:46:26,622] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:46:26,639] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 1.515 seconds
+[2023-06-23 00:46:56,975] {scheduler_job.py:182} INFO - Started process (PID=598) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:46:56,982] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:46:56,986] {logging_mixin.py:104} INFO - [2023-06-23 00:46:56,985] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:46:57,737] {logging_mixin.py:104} INFO - [2023-06-23 00:46:57,737] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:46:58,333] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:46:58,422] {logging_mixin.py:104} INFO - [2023-06-23 00:46:58,421] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:46:58,479] {logging_mixin.py:104} INFO - [2023-06-23 00:46:58,479] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:46:58,500] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 1.546 seconds
+[2023-06-23 00:47:28,978] {scheduler_job.py:182} INFO - Started process (PID=600) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:47:28,987] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:47:28,997] {logging_mixin.py:104} INFO - [2023-06-23 00:47:28,996] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:47:29,682] {logging_mixin.py:104} INFO - [2023-06-23 00:47:29,681] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:47:30,253] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:47:30,322] {logging_mixin.py:104} INFO - [2023-06-23 00:47:30,321] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:47:30,379] {logging_mixin.py:104} INFO - [2023-06-23 00:47:30,378] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:47:30,403] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 1.444 seconds
+[2023-06-23 00:48:01,265] {scheduler_job.py:182} INFO - Started process (PID=602) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:48:01,271] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:48:01,276] {logging_mixin.py:104} INFO - [2023-06-23 00:48:01,275] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:48:02,034] {logging_mixin.py:104} INFO - [2023-06-23 00:48:02,033] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:48:02,936] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:48:03,030] {logging_mixin.py:104} INFO - [2023-06-23 00:48:03,030] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:48:03,084] {logging_mixin.py:104} INFO - [2023-06-23 00:48:03,084] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:48:03,102] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 1.856 seconds
+[2023-06-23 00:48:33,591] {scheduler_job.py:182} INFO - Started process (PID=604) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:48:33,599] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:48:33,607] {logging_mixin.py:104} INFO - [2023-06-23 00:48:33,606] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:48:34,356] {logging_mixin.py:104} INFO - [2023-06-23 00:48:34,355] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:48:34,900] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:48:34,974] {logging_mixin.py:104} INFO - [2023-06-23 00:48:34,973] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:48:35,028] {logging_mixin.py:104} INFO - [2023-06-23 00:48:35,028] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:48:35,051] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 1.472 seconds
+[2023-06-23 00:49:05,351] {scheduler_job.py:182} INFO - Started process (PID=606) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:49:05,357] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:49:05,361] {logging_mixin.py:104} INFO - [2023-06-23 00:49:05,360] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:49:06,576] {logging_mixin.py:104} INFO - [2023-06-23 00:49:06,575] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:49:07,203] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:49:07,293] {logging_mixin.py:104} INFO - [2023-06-23 00:49:07,293] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:49:07,345] {logging_mixin.py:104} INFO - [2023-06-23 00:49:07,345] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:49:07,366] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 2.039 seconds
+[2023-06-23 00:49:38,069] {scheduler_job.py:182} INFO - Started process (PID=608) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:49:38,076] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:49:38,084] {logging_mixin.py:104} INFO - [2023-06-23 00:49:38,082] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:49:38,797] {logging_mixin.py:104} INFO - [2023-06-23 00:49:38,796] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:49:39,399] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:49:39,489] {logging_mixin.py:104} INFO - [2023-06-23 00:49:39,489] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:49:39,557] {logging_mixin.py:104} INFO - [2023-06-23 00:49:39,556] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:49:39,578] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 1.527 seconds
+[2023-06-23 00:50:09,967] {scheduler_job.py:182} INFO - Started process (PID=610) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:50:09,975] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:50:09,978] {logging_mixin.py:104} INFO - [2023-06-23 00:50:09,978] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:50:10,681] {logging_mixin.py:104} INFO - [2023-06-23 00:50:10,680] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:50:11,202] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:50:11,273] {logging_mixin.py:104} INFO - [2023-06-23 00:50:11,273] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:50:11,350] {logging_mixin.py:104} INFO - [2023-06-23 00:50:11,350] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:50:11,379] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 1.442 seconds
+[2023-06-23 00:50:41,711] {scheduler_job.py:182} INFO - Started process (PID=612) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:50:41,719] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-23 00:50:41,723] {logging_mixin.py:104} INFO - [2023-06-23 00:50:41,723] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:50:42,522] {logging_mixin.py:104} INFO - [2023-06-23 00:50:42,522] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-23 00:50:43,108] {scheduler_job.py:639} INFO - DAG(s) dict_keys(['etl_dag']) retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-23 00:50:43,166] {logging_mixin.py:104} INFO - [2023-06-23 00:50:43,166] {dag.py:1818} INFO - Sync 1 DAGs
+[2023-06-23 00:50:43,218] {logging_mixin.py:104} INFO - [2023-06-23 00:50:43,218] {dag.py:2273} INFO - Setting next_dagrun for etl_dag to None
+[2023-06-23 00:50:43,235] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 1.534 seconds
