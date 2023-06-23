@@ -6,6 +6,7 @@ from airflow.decorators import task, dag
 from airflow.utils.dates import days_ago
 from airflow.utils.task_group import TaskGroup
 from datetime import datetime, timedelta
+from load_to_postgres import load_data_from
 from lambda_caller import *
 from utils import *
 import logging
@@ -34,12 +35,21 @@ def etl_dag():
         logging.info(f'transform load: {result}')
         return result
     
+    @task
+    def load_data_from_to_db(s3_file):
+        logging.info(f'loading data from file: {s3_file}')
+        last_records = load_data_from(s3_file)
+        logging.info(f'records inserted: {last_records}')
+
+
     origin = "NYC" #"PHI"
     destination = "CHI"
-    departure_date_str = "2023-08-8"
-    data = extract_load_task(origin, destination, departure_date_str)
-    result = transform_load_task(origin, destination, departure_date_str)
-    data >> result
+    departure_date_str = "2023-08-12"
+    extract_and_load_data = extract_load_task(origin, destination, departure_date_str)
+    load_and_transform_data = transform_load_task(origin, destination, departure_date_str)
+    file_name = generate_file_name(origin, destination, departure_date_str)
+    load_to_db = load_data_from_to_db(f'transformed/{file_name}')
+    extract_and_load_data >> load_and_transform_data >> load_to_db
 
 
 dag = etl_dag()

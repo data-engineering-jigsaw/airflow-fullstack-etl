@@ -26,3 +26,18 @@ functions:
   transform_load:
     image:
       name: transform_load
+resources:
+  Resources:
+    MyDatabase:
+      Type: AWS::RDS::DBInstance
+      Properties:
+        AllocatedStorage: 20
+        DBInstanceIdentifier: flights-db
+        Engine: postgres
+        EngineVersion: 14.7
+        Port: 5432
+        MasterUsername: jigsaw
+        MasterUserPassword: jigsawlabs
+        DBInstanceClass: db.t3.micro
+        PubliclyAccessible: true
+        
