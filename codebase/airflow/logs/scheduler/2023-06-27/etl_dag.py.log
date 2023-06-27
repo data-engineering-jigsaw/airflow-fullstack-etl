@@ -3747,3 +3747,49 @@ Traceback (most recent call last):
 botocore.errorfactory.ResourceNotFoundException: An error occurred (ResourceNotFoundException) when calling the Invoke operation: Function not found: arn:aws:lambda:us-east-1:086729879076:function:flights-app-dev-extract_load
 [2023-06-27 22:09:17,265] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
 [2023-06-27 22:09:17,304] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 2.846 seconds
+[2023-06-27 22:09:48,015] {scheduler_job.py:182} INFO - Started process (PID=372) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-27 22:09:48,022] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-27 22:09:48,026] {logging_mixin.py:104} INFO - [2023-06-27 22:09:48,026] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-27 22:09:51,143] {logging_mixin.py:104} INFO - [2023-06-27 22:09:51,142] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-27 22:09:53,053] {logging_mixin.py:104} INFO - [2023-06-27 22:09:53,030] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 10, in <module>
+    from lambda_caller import *
+  File "/opt/airflow/dags/lambda_caller.py", line 36, in <module>
+    departure_date_str = departure_date_str)
+  File "/opt/airflow/dags/lambda_caller.py", line 14, in extract_load
+    Payload=json.dumps(event)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.ResourceNotFoundException: An error occurred (ResourceNotFoundException) when calling the Invoke operation: Function not found: arn:aws:lambda:us-east-1:086729879076:function:flights-app-dev-extract_load
+[2023-06-27 22:09:53,059] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-27 22:09:53,229] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 5.249 seconds
+[2023-06-27 22:10:23,837] {scheduler_job.py:182} INFO - Started process (PID=374) to work on /opt/airflow/dags/etl_dag.py
+[2023-06-27 22:10:23,843] {scheduler_job.py:629} INFO - Processing file /opt/airflow/dags/etl_dag.py for tasks to queue
+[2023-06-27 22:10:23,847] {logging_mixin.py:104} INFO - [2023-06-27 22:10:23,846] {dagbag.py:448} INFO - Filling up the DagBag from /opt/airflow/dags/etl_dag.py
+[2023-06-27 22:10:25,938] {logging_mixin.py:104} INFO - [2023-06-27 22:10:25,937] {credentials.py:1210} INFO - Found credentials in shared credentials file: /usr/local/airflow/.aws/credentials
+[2023-06-27 22:10:27,106] {logging_mixin.py:104} INFO - [2023-06-27 22:10:27,098] {dagbag.py:305} ERROR - Failed to import: /opt/airflow/dags/etl_dag.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.6/site-packages/airflow/models/dagbag.py", line 302, in _load_modules_from_file
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/etl_dag.py", line 10, in <module>
+    from lambda_caller import *
+  File "/opt/airflow/dags/lambda_caller.py", line 36, in <module>
+    departure_date_str = departure_date_str)
+  File "/opt/airflow/dags/lambda_caller.py", line 14, in extract_load
+    Payload=json.dumps(event)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 357, in _api_call
+    return self._make_api_call(operation_name, kwargs)
+  File "/home/airflow/.local/lib/python3.6/site-packages/botocore/client.py", line 676, in _make_api_call
+    raise error_class(parsed_response, operation_name)
+botocore.errorfactory.ResourceNotFoundException: An error occurred (ResourceNotFoundException) when calling the Invoke operation: Function not found: arn:aws:lambda:us-east-1:086729879076:function:flights-app-dev-extract_load
+[2023-06-27 22:10:27,110] {scheduler_job.py:641} WARNING - No viable dags retrieved from /opt/airflow/dags/etl_dag.py
+[2023-06-27 22:10:27,154] {scheduler_job.py:190} INFO - Processing /opt/airflow/dags/etl_dag.py took 3.331 seconds

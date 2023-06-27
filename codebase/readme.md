@@ -10,7 +10,7 @@ Flights data pipeline retrieves and stores flights data to track prices.  Curren
 
 * Alerting - The pipeline can be used to alert when there is a good deal on a specific flight -- or to send an alert when flights are below a specific price.
 
-### Use
+### Usage
 
 We use serverless to deploy dockerized lambda functions, an rds instance and grant access to an S3 bucket.  For the below steps to work, docker should be installed and runing.
 
