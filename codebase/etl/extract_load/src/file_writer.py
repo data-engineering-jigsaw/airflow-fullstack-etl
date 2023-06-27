@@ -2,6 +2,7 @@ import boto3
 import json
 from src.amadeus_client import AmadeusClient
 from datetime import datetime, timedelta
+from settings import bucket_name
 s3 = boto3.client('s3')
 
 def generate_file_name(origin, destination, departure_date_str, folder_name = 'raw'):

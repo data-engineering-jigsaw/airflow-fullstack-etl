@@ -168,45 +168,11 @@
         }
       }
     },
-    "TransformUnderscoreloadLambdaFunction": {
-      "Type": "AWS::Lambda::Function",
-      "Properties": {
-        "Code": {
-          "ImageUri": "086729879076.dkr.ecr.us-east-1.amazonaws.com/serverless-flights-app-dev@sha256:8de7f89605ceb4de49e76cc044e0b2f77d3a442d38bbb39f7140bd60e62a67fa"
-        },
-        "PackageType": "Image",
-        "FunctionName": "flights-app-dev-transform_load",
-        "MemorySize": 10240,
-        "Timeout": 45,
-        "Architectures": [
-          "arm64"
-        ],
-        "Role": {
-          "Fn::GetAtt": [
-            "IamRoleLambdaExecution",
-            "Arn"
-          ]
-        }
-      },
-      "DependsOn": [
-        "TransformUnderscoreloadLogGroup"
-      ]
-    },
-    "TransformUnderscoreloadLambdaVersionEmhYbbj5lMnIYJeJsk39SbS7xQxV6GRiLq0NMBw": {
-      "Type": "AWS::Lambda::Version",
-      "DeletionPolicy": "Retain",
-      "Properties": {
-        "FunctionName": {
-          "Ref": "TransformUnderscoreloadLambdaFunction"
-        },
-        "CodeSha256": "8de7f89605ceb4de49e76cc044e0b2f77d3a442d38bbb39f7140bd60e62a67fa"
-      }
-    },
     "ExtractUnderscoreloadLambdaFunction": {
       "Type": "AWS::Lambda::Function",
       "Properties": {
         "Code": {
-          "ImageUri": "086729879076.dkr.ecr.us-east-1.amazonaws.com/serverless-flights-app-dev@sha256:85a9a069e548f1c8cd98a706c46f64e21b97bf0b067324606127fb126ff7406c"
+          "ImageUri": "086729879076.dkr.ecr.us-east-1.amazonaws.com/serverless-flights-app-dev@sha256:e4d7481134f063dab0773f1b06d5952852e66ef3a9f62f0da36cb90b268c6a80"
         },
         "PackageType": "Image",
         "FunctionName": "flights-app-dev-extract_load",
@@ -226,31 +192,62 @@
         "ExtractUnderscoreloadLogGroup"
       ]
     },
-    "ExtractUnderscoreloadLambdaVersionpFvaltdip0yejpdhZuJ0S6cZ6DTsXQWPjaHLl7T30": {
+    "ExtractUnderscoreloadLambdaVersionvgwN4tWW0O9AJz8hvNArUS2tKayDiOSebq3RJKkh4Zc": {
       "Type": "AWS::Lambda::Version",
       "DeletionPolicy": "Retain",
       "Properties": {
         "FunctionName": {
           "Ref": "ExtractUnderscoreloadLambdaFunction"
         },
-        "CodeSha256": "85a9a069e548f1c8cd98a706c46f64e21b97bf0b067324606127fb126ff7406c"
+        "CodeSha256": "e4d7481134f063dab0773f1b06d5952852e66ef3a9f62f0da36cb90b268c6a80"
+      }
+    },
+    "TransformUnderscoreloadLambdaFunction": {
+      "Type": "AWS::Lambda::Function",
+      "Properties": {
+        "Code": {
+          "ImageUri": "086729879076.dkr.ecr.us-east-1.amazonaws.com/serverless-flights-app-dev@sha256:1daa1d9cc0f147ccafab4f8ba42c4dad9ba95d0b4b00513cabb8c98fc8cff45b"
+        },
+        "PackageType": "Image",
+        "FunctionName": "flights-app-dev-transform_load",
+        "MemorySize": 10240,
+        "Timeout": 45,
+        "Architectures": [
+          "arm64"
+        ],
+        "Role": {
+          "Fn::GetAtt": [
+            "IamRoleLambdaExecution",
+            "Arn"
+          ]
+        }
+      },
+      "DependsOn": [
+        "TransformUnderscoreloadLogGroup"
+      ]
+    },
+    "TransformUnderscoreloadLambdaVersionVUFnqRrO21N8qJwLlVqs05YLeHneclI38z5k4Dqn6U": {
+      "Type": "AWS::Lambda::Version",
+      "DeletionPolicy": "Retain",
+      "Properties": {
+        "FunctionName": {
+          "Ref": "TransformUnderscoreloadLambdaFunction"
+        },
+        "CodeSha256": "1daa1d9cc0f147ccafab4f8ba42c4dad9ba95d0b4b00513cabb8c98fc8cff45b"
       }
     },
     "MyDatabase": {
       "Type": "AWS::RDS::DBInstance",
       "Properties": {
         "AllocatedStorage": 20,
-        "DBInstanceIdentifier": "flights-db",
+        "DBInstanceIdentifier": "${db_instance_name}",
         "Engine": "postgres",
         "EngineVersion": 14.7,
         "Port": 5432,
-        "MasterUsername": "jigsaw",
-        "MasterUserPassword": "jigsawlabs",
+        "MasterUsername": "${db_username}",
+        "MasterUserPassword": "${db_password}",
         "DBInstanceClass": "db.t3.micro",
-        "PubliclyAccessible": true,
-        "Parameters": {
-          "DatabaseName": "flightsdb"
-        }
+        "PubliclyAccessible": true
       }
     }
   },
@@ -263,22 +260,22 @@
         "Name": "sls-flights-app-dev-ServerlessDeploymentBucketName"
       }
     },
-    "TransformUnderscoreloadLambdaFunctionQualifiedArn": {
-      "Description": "Current Lambda function version",
-      "Value": {
-        "Ref": "TransformUnderscoreloadLambdaVersionEmhYbbj5lMnIYJeJsk39SbS7xQxV6GRiLq0NMBw"
-      },
-      "Export": {
-        "Name": "sls-flights-app-dev-TransformUnderscoreloadLambdaFunctionQualifiedArn"
-      }
-    },
     "ExtractUnderscoreloadLambdaFunctionQualifiedArn": {
       "Description": "Current Lambda function version",
       "Value": {
-        "Ref": "ExtractUnderscoreloadLambdaVersionpFvaltdip0yejpdhZuJ0S6cZ6DTsXQWPjaHLl7T30"
+        "Ref": "ExtractUnderscoreloadLambdaVersionvgwN4tWW0O9AJz8hvNArUS2tKayDiOSebq3RJKkh4Zc"
       },
       "Export": {
         "Name": "sls-flights-app-dev-ExtractUnderscoreloadLambdaFunctionQualifiedArn"
+      }
+    },
+    "TransformUnderscoreloadLambdaFunctionQualifiedArn": {
+      "Description": "Current Lambda function version",
+      "Value": {
+        "Ref": "TransformUnderscoreloadLambdaVersionVUFnqRrO21N8qJwLlVqs05YLeHneclI38z5k4Dqn6U"
+      },
+      "Export": {
+        "Name": "sls-flights-app-dev-TransformUnderscoreloadLambdaFunctionQualifiedArn"
       }
     }
   }

@@ -32,12 +32,12 @@ resources:
       Type: AWS::RDS::DBInstance
       Properties:
         AllocatedStorage: 20
-        DBInstanceIdentifier: flights-db
+        DBInstanceIdentifier: ${db_instance_name}
         Engine: postgres
         EngineVersion: 14.7
         Port: 5432
-        MasterUsername: jigsaw
-        MasterUserPassword: jigsawlabs
+        MasterUsername: ${db_username}
+        MasterUserPassword: ${db_password}
         DBInstanceClass: db.t3.micro
         PubliclyAccessible: true
         
