@@ -23,6 +23,8 @@ npm install serverless
 2. Customize the data pipeline
 The pipeline relies on the amadeus api.  Register for API keys, and then update the credentials in the `codebase/extract_load/.env` file.  You will also need an S3 bucket associated with your aws account.  Specify this in the `codebase/extract_load/.env` file as well as the `transform_load/.env` file.  Finally in the project directory's .env file, specify a rds service name, database name, and database password. 
 
+You can also create an S3 bucket and specify the `bucket_name` in the `transform_load` and `extract_load` `.env` files. 
+
 3. Deploy AWS services
 Serverless relies on AWS user credentials being set in the ~./aws directory.  You can check if your credentials are there by running the following.
 
@@ -48,6 +50,8 @@ With that access, and with docker up and running, you can deploy the aws service
 ```bash
 sls deploy
 ```
+
+Initialize the database.  After the RDS instance is available, we can create a new database and table.  Run the function in the `load_to_postgres/setup_db.py`.  The `create_database` function will start with the default postgres database and create a new database defined in the `.env` file.  And then we can run the `create_table` function to create a `flights` table that we will load our s3 data to. 
 
 4. Kick off pipeline with airflow
 
