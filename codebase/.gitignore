@@ -1,0 +1,3 @@
+extract_load/.env
+load_to_postgres/.env
+transform_load/.env

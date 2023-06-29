@@ -18,4 +18,5 @@ class AmadeusFlightAdapter:
         return {'departure_time': departure_time, 
                 'arrival_time': arrival_time, 
                 'departure_airport': departure_airport, 
-                'arrival_airport': arrival_airport, 'total_price': total_price}
+                'arrival_airport': arrival_airport,
+                'total_price': total_price}
